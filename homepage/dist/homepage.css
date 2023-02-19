@@ -1,3 +1,14 @@
+/* Variables */
+:root {
+  --blue: #3a82ee;
+  --white: #EEE;
+  --grey: #888;
+  --dark: #313154;
+  --red: #ff5b57;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* End of Variables */
 * {
   box-sizing: border-box;
 }
@@ -14,7 +25,7 @@ body {
 
 .header {
   min-height: 80px;
-  background: white;
+  background: var(--white);
 }
 .header__container {
   display: flex;
@@ -25,12 +36,13 @@ body {
   padding-top: 5px;
 }
 .header__container__a {
-  color: #1313b5;
+  color: var(--dark);
   text-decoration: none;
   padding: 0 12px;
 }
 .header__container__a:hover {
-  color: #250561;
+  color: var(--white);
+  background: var(--blue);
   text-decoration: underline;
 }
 
@@ -41,7 +53,7 @@ body {
 
 .boxMain {
   min-height: 300px;
-  background: white;
+  background: var(--white);
   position: relative;
 }
 .boxMain__container {
@@ -50,23 +62,27 @@ body {
   max-height: 300px;
   min-height: inherit;
   padding: 32px;
-  color: blue;
+  color: var(--blue);
   display: flex;
   margin: auto;
   left: 50%;
 }
 .boxMain__container__boxes {
   width: 30%;
-  background: white;
+  background: var(--white);
   text-align: center;
   padding: 16px;
-  box-shadow: 9px 8px 15px 8px #000000;
-  box-shadow: 9px 8px 15px 8px #000000;
+  box-shadow: 9px 8px 15px 8px var(--dark);
+  box-shadow: 9px 8px 15px 8px var(--dark);
   z-index: 99;
 }
 .boxMain__container__boxes__img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+}
+
+p {
+  margin: 0;
 }
 
 .boxMain__halfBlue {
@@ -75,7 +91,7 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: #e6e6f5;
+  background: var(--blue);
 }
 
 .btnDiv {
@@ -88,12 +104,12 @@ body {
   font-weight: bold;
   text-indent: 12px;
   line-height: 13px;
-  color: #4b08c7;
+  color: var(--blue);
   border-width: 9px;
-  border-color: #d9d6d6;
+  border-color: var(--grey);
   border-style: outset;
   border-radius: 8px;
-  background-color: 230, 230, 245;
+  background-color: var(--white);
   padding: 9px;
   margin: auto;
   left: 50%;

@@ -1,3 +1,14 @@
+/* Variables */
+:root {
+	--blue: #3a82ee;
+	--white: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--red: #ff5b57;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* End of Variables */
+
 *{
     box-sizing: border-box;
 }
@@ -6,14 +17,16 @@ body{
     margin: 0;
     font-family: georgia;
 }
+
 .box{
     width: 100%;
     padding: 0 16px;
 
 }
+
 .header{
     min-height: 80px;
-    background: white;
+    background: var(--white);
    
     &__container{
         display: flex;
@@ -25,14 +38,16 @@ body{
         }
 
         &__a{
-            color: rgb(19, 19, 181);
+            color: var(--dark);
             text-decoration: none;
             padding: 0 12px;
         }
         
         &__a:hover{
-            color: rgb(37, 5, 97);
+            color: var(--white);
+            background: var(--blue);
             text-decoration: underline;
+
             
         }
     }
@@ -47,7 +62,7 @@ body{
 .boxMain{
     
     min-height: 300px;
-    background: white;
+    background: var(--white);
     position: relative;
 
     &__container{
@@ -56,28 +71,30 @@ body{
         max-height: 300px;
         min-height: inherit;
         padding: 32px;
-        color: blue;
+        color: var(--blue);
         display: flex;
-        // text-align: center;
-        // align-items: center;
         margin: auto;
         left: 50%;
     
 
         &__boxes{
             width: 30%;
-            background: white;
+            background: var(--white);
             text-align: center;
             padding: 16px;
-            box-shadow: 9px 8px 15px 8px #000000; 
-            box-shadow: 9px 8px 15px 8px #000000;
+            box-shadow: 9px 8px 15px 8px var(--dark); 
+            box-shadow: 9px 8px 15px 8px var(--dark);
             z-index: 99;        
+
             &__img{
-                width: 40px;
-                height: 40px;
+                width: 80px;
+                height: 80px;
             }
         }
     }
+}
+p{
+    margin: 0;
 }
 .boxMain__halfBlue{
     position: absolute;
@@ -85,7 +102,7 @@ body{
     left: 0;
     width: 100%;
     height: 100px;
-    background:rgb(230, 230, 245) ;
+    background:var(--blue);
 }
 
 .btnDiv{
@@ -100,12 +117,12 @@ body{
         font-weight:bold;
         text-indent:12px;
         line-height:13px;
-        color:#4b08c7;
+        color: var(--blue);
         border-width:9px;
-        border-color: rgb(217, 214, 214);
+        border-color: var(--grey);
         border-style:outset;
         border-radius:8px;
-        background-color:(230, 230, 245);
+        background-color:var(--white);
         padding:9px;
         margin: auto;
         left: 50%;
