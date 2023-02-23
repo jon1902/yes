@@ -39,7 +39,7 @@ function handleShowRoommate(nameUser:string) : void{
                 console.log(userProfils[i].name)
                 const html = 
                     `<div class="ditail__box">
-                    <botton class="profilBtn">X</botton><br>     
+                    <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
                     <img class="ditail__box__img"
                     src= ${userProfils[i].imgSrc} alt="roommate Img">
                     <h4>${userProfils[i].name}</h4>
@@ -65,6 +65,22 @@ function handleShowRoommate(nameUser:string) : void{
     } catch (error) {
         console.error(error);
     }
+}
+
+function hendelBtnBackToPage(){
+    try {
+        console.log("backPage");
+        
+        const elementDitail = document.getElementById("ditails");
+        if (!elementDitail) throw new Error("Couldnt find element in the DOM");
+        elementDitail.remove()
+        location.reload()
+       
+    } catch (error) {
+        console.error(error)
+    }
+
+
 }
 function handleShowAapartment(ev){
     try{
