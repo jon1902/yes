@@ -44,6 +44,7 @@ function handleShowRoommate(nameUser) {
                 element.innerHTML = html;
                 element.style.display = "block";
                 document.getElementById("containerBox").style.display = "none";
+                document.getElementById("containerApartment").style.display = "none";
             }
         }
     }
@@ -69,8 +70,7 @@ function handleShowAapartment(apartmenNames) {
         console.log(apartmenNames);
         for (var i = 0; i < apartmentProfils.length; i++) {
             if (apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1) {
-                console.log(apartmentProfils[i].apartmentImages[0]);
-                var html = "<div class=\"ditail__box\">\n                    <botton class=\"profilBtn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    <img class=\"ditail__box__img\"\n                    src= " + apartmentProfils[i].apartmentImages[0] + " alt=\"roommate Img\">\n                    <h4>" + apartmentProfils[i].city + "</h4>\n                    <p>The address  - " + apartmentProfils[i].address + "</p>\n                    <p>The apartment city - " + apartmentProfils[i].city + " city</p>\n                    <p>The apartment area -  " + apartmentProfils[i].area + " area</p>\n                    <p>Animal - " + apartmentProfils[i].animal + "</p>\n                    <p>Smoke - " + apartmentProfils[i].smoke + " </p>\n                    <p>We live in " + apartmentProfils[i].flor + " flor</p>\n                    <p>We have " + apartmentProfils[i].rooms + " rooms</p>\n                    <p>The number of parters - " + apartmentProfils[i].partersNo + " parters</p>\n                    <p>The price is - " + apartmentProfils[i].price + " NIS</p>\n                    </div>";
+                var html = "<div class=\"ditail__box\">\n                    <botton class=\"profilBtn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    <img class=\"ditail__box__img\"\n                    src= " + apartmentProfils[i].apartmentImages[0].urlPicture + " alt=\"roommate Img\">\n                    <h4>" + apartmentProfils[i].city + "</h4>\n                    <p>The address  - " + apartmentProfils[i].address + "</p>\n                    <p>The apartment city - " + apartmentProfils[i].city + " city</p>\n                    <p>The apartment area -  " + apartmentProfils[i].area + " area</p>\n                    <p>Animal - " + apartmentProfils[i].animal + "</p>\n                    <p>Smoke - " + apartmentProfils[i].smoke + " </p>\n                    <p>We live in " + apartmentProfils[i].flor + " flor</p>\n                    <p>We have " + apartmentProfils[i].rooms + " rooms</p>\n                    <p>The number of parters - " + apartmentProfils[i].partersNo + " parters</p>\n                    <p>The price is - " + apartmentProfils[i].price + " NIS</p>\n                    </div>";
                 console.log("html " + html);
                 var element = document.getElementById("ditails");
                 if (!element)
@@ -78,6 +78,7 @@ function handleShowAapartment(apartmenNames) {
                 element.innerHTML = html;
                 element.style.display = "block";
                 document.getElementById("containerApartment").style.display = "none";
+                document.getElementById("containerBox").style.display = "none";
             }
         }
     }

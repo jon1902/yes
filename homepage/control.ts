@@ -68,6 +68,8 @@ function handleShowRoommate(nameUser:string) : void{
         element.innerHTML = html;
         element.style.display = "block"
         document.getElementById("containerBox")!.style.display = "none"
+        document.getElementById("containerApartment")!.style.display = "none"
+
         }
     }
     } catch (error) {
@@ -95,12 +97,12 @@ function handleShowAapartment(apartmenNames:string): void{
         
         for(let i=0; i < apartmentProfils.length; i++){
             if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
-                console.log(apartmentProfils[i].apartmentImages[0])
+                                
                 const html = 
                     `<div class="ditail__box">
                     <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
                     <img class="ditail__box__img"
-                    src= ${apartmentProfils[i].apartmentImages[0]} alt="roommate Img">
+                    src= ${apartmentProfils[i].apartmentImages[0].urlPicture} alt="roommate Img">
                     <h4>${apartmentProfils[i].city}</h4>
                     <p>The address  - ${apartmentProfils[i].address}</p>
                     <p>The apartment city - ${apartmentProfils[i].city} city</p>
@@ -119,6 +121,7 @@ function handleShowAapartment(apartmenNames:string): void{
         element.innerHTML = html;
         element.style.display = "block"
         document.getElementById("containerApartment")!.style.display = "none"
+        document.getElementById("containerBox")!.style.display = "none"
         }
     }
     } catch (error) {
