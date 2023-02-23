@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   --blue: #3a82ee;
-  --white: #EEE;
+  --white: rgb(255, 255, 255);
   --grey: #888;
   --dark: #313154;
   --red: #ff5b57;
@@ -11,27 +11,31 @@
 /* End of Variables */
 * {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: georgia;
+  font-family: "Poppins", sans-serif;
 }
 
 .box {
+  gap: 40px;
   width: 100%;
   padding: 0 16px;
-  margin-top: 50px;
+  margin-top: 70px;
+  background-color: var(--white);
 }
 
 .header {
-  position: relative;
+  margin: 0%;
   min-height: 80px;
   background: var(--white);
+  border: 3px solid var(--dark);
 }
 .header__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .header__container__logo {
@@ -40,12 +44,11 @@ body {
 .header__container__a {
   color: var(--dark);
   text-decoration: none;
-  padding: 0 12px;
+  padding: 30px;
 }
 .header__container__a:hover {
   color: var(--white);
   background: var(--blue);
-  text-decoration: underline;
 }
 
 .container {
@@ -103,6 +106,7 @@ p {
 }
 .btnDiv__btn {
   height: 50px;
+  width: 300px;
   margin: auto;
   border: none;
   color: #fff;
