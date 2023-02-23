@@ -21,10 +21,13 @@ body{
 .box{
     width: 100%;
     padding: 0 16px;
+    margin-top: 50px;
 
 }
 
+
 .header{
+    position:relative;
     min-height: 80px;
     background: var(--white);
    
@@ -77,6 +80,7 @@ body{
         left: 50%;
         cursor: pointer;;
 
+
         &__boxes{
             width: 30%;
             background: var(--white);
@@ -84,7 +88,9 @@ body{
             padding: 16px;
             box-shadow: 9px 8px 15px 8px var(--dark); 
             box-shadow: 9px 8px 15px 8px var(--dark);
-            z-index: 99;        
+            z-index: 99;    
+            
+            
 
             &__img{
                 width: 80px;
@@ -110,23 +116,20 @@ p{
 
 .btnDiv{
     display: flex;
+    margin: 30px;
 
     &__btn{
-        font-family:Georgia, serif;
-        font-size:20px;
-        font-style:italic;
-        font-weight:bold;
-        text-indent:12px;
-        line-height:13px;
-        color: var(--blue);
-        border-width:9px;
-        border-color: var(--grey);
-        border-style:outset;
-        border-radius:8px;
-        background-color:var(--white);
-        padding:9px;
-        margin: auto;
-        left: 50%;
+        height: 50px;
+        margin:auto;
+        border: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: var(--blue);
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
 }
 
