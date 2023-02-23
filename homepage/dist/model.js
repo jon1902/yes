@@ -32,6 +32,7 @@ var userProfils = [];
 userProfils.push(new UserProfil('Panda Bired', 'Herzel 5', 'Tel aviv', 'Center', 'Yes', 'No', '4', '5', '4', '2000', 'https://icon2.cleanpng.com/20171221/weq/lovely-pink-owl-5a3c4517ea17e2.0389561715138992879589.jpg'));
 userProfils.push(new UserProfil('Fire Bired', 'Negev', 'Hifa', 'North', 'No', 'Yes', '3', '4', '3', '3000', 'https://icon2.cleanpng.com/20171221/jtq/large-blue-bird-png-cartoon-clipart-5a3c5525e9c967.7588221415139033979576.jpg'));
 userProfils.push(new UserProfil('Owl Cartoon', 'Herzel 30', 'Holon', 'Merkaz', 'Yes', 'No', '4', '6', '5', '1500', 'https://icon2.cleanpng.com/20171221/lxe/owl-with-school-books-png-clipart-picture-5a3c4e3aaf2de9.3807862115139016267175.jpg'));
+userProfils.push(new UserProfil('Owl Cartoon', 'Herzel 30', 'Holon', 'Merkaz', 'Yes', 'No', '4', '6', '5', '1500', 'https://icon2.cleanpng.com/20171221/lxe/owl-with-school-books-png-clipart-picture-5a3c4e3aaf2de9.3807862115139016267175.jpg'));
 console.log(userProfils);
 var ApartmentProfil = /** @class */ (function () {
     function ApartmentProfil(address, city, neighbour, area, animal, smoke, flor, rooms, partersNo, price, apartmentImages) {
