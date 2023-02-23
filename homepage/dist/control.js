@@ -30,7 +30,7 @@ function handleShowRoommate(nameUser) {
         for (var i = 0; i < userProfils.length; i++) {
             if (nameUser.indexOf(userProfils[i].name) != -1) {
                 console.log(userProfils[i].name);
-                var html = "<div class=\"ditail__box\">\n                    <botton class=\"profilBtn\">X</botton><br>     \n                    <img class=\"ditail__box__img\"\n                    src= " + userProfils[i].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + userProfils[i].name + "</h4>\n                    <p>My address is - " + userProfils[i].address + "</p>\n                    <p>I'm looking in - " + userProfils[i].city + " city</p>\n                    <p>I'm looking in -  " + userProfils[i].area + " area</p>\n                    <p>Animal - " + userProfils[i].animal + "</p>\n                    <p>Smoke - " + userProfils[i].smoke + " </p>\n                    <p>Up to  " + userProfils[i].flor + " flor</p>\n                    <p>Up to " + userProfils[i].rooms + " rooms</p>\n                    <p>Up to  " + userProfils[i].partersNo + " parters</p>\n                    <p>Up to " + userProfils[i].price + " NIS</p>\n                    </div>";
+                var html = "<div class=\"ditail__box\">\n                    <botton class=\"profilBtn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    <img class=\"ditail__box__img\"\n                    src= " + userProfils[i].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + userProfils[i].name + "</h4>\n                    <p>My address is - " + userProfils[i].address + "</p>\n                    <p>I'm looking in - " + userProfils[i].city + " city</p>\n                    <p>I'm looking in -  " + userProfils[i].area + " area</p>\n                    <p>Animal - " + userProfils[i].animal + "</p>\n                    <p>Smoke - " + userProfils[i].smoke + " </p>\n                    <p>Up to  " + userProfils[i].flor + " flor</p>\n                    <p>Up to " + userProfils[i].rooms + " rooms</p>\n                    <p>Up to  " + userProfils[i].partersNo + " parters</p>\n                    <p>Up to " + userProfils[i].price + " NIS</p>\n                    </div>";
                 console.log("html " + html);
                 var element = document.getElementById("ditails");
                 if (!element)
@@ -40,6 +40,19 @@ function handleShowRoommate(nameUser) {
                 document.getElementById("containerBox").style.display = "none";
             }
         }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function hendelBtnBackToPage() {
+    try {
+        console.log("backPage");
+        var elementDitail = document.getElementById("ditails");
+        if (!elementDitail)
+            throw new Error("Couldnt find element in the DOM");
+        elementDitail.remove();
+        location.reload();
     }
     catch (error) {
         console.error(error);
