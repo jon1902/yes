@@ -75,7 +75,7 @@ body{
         display: flex;
         margin: auto;
         left: 50%;
-    
+        cursor: pointer;;
 
         &__boxes{
             width: 30%;
@@ -93,10 +93,13 @@ body{
         }
     }
 }
+
 p{
     margin: 0;
+
 }
-.boxMain__halfBlue{
+
+.halfBlue{
     position: absolute;
     top: 0;
     left: 0;
@@ -108,9 +111,7 @@ p{
 .btnDiv{
     display: flex;
 
-
     &__btn{
-    
         font-family:Georgia, serif;
         font-size:20px;
         font-style:italic;
@@ -128,3 +129,43 @@ p{
         left: 50%;
     }
 }
+
+.profilBtn{
+    border: 2px var(--blue) solid;
+    padding: 1px;
+
+}
+
+.ditail{
+    font-family: georgia;
+    font-size: 30px;
+    margin-top: 40px;
+    min-height: 650px;
+    background: var(--white);
+
+    &__box{
+        max-width: 1200px;
+        max-height: 10px;
+        min-height: inherit;
+        padding: 32px;
+        color: var(--dark);
+        margin: auto;
+        left: 50%;
+
+        width: 40%;
+        background: var(--white);
+        text-align: center;
+        padding: 16px;
+        box-shadow: 9px 8px 15px 8px var(--blue); 
+        box-shadow: 9px 8px 15px 8px var(--blue);
+        z-index: 99;        
+        
+        &__img{
+            width: 150px;
+            height: 150px;
+            
+            }
+
+        }
+    }
+
