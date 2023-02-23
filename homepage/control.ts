@@ -30,6 +30,12 @@ roommateDivs.forEach((roommateDiv) =>{
         handleShowRoommate(roommateDiv.innerHTML)
     })
 })
+apartmentDivs.forEach((apartmentDiv) =>{
+    apartmentDiv.addEventListener("click", () => {
+        handleShowAapartment(apartmentDiv.innerHTML)
+
+    })
+})
 
 
 function handleShowRoommate(nameUser:string) : void{
@@ -79,32 +85,41 @@ function hendelBtnBackToPage(){
     } catch (error) {
         console.error(error)
     }
-
-
 }
-function handleShowAapartment(ev){
+
+function handleShowAapartment(apartmenNames:string): void{
     try{
-        // console.log(ev)
-        // const html = apartmentProfils
-    
-        // .map((profile) => {
-        // return `
-        // <div class="boxMain__container__boxes">
-        // <img class="boxMain__container__boxes__img"
-        //     src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
-        // <h4>${apartments.city}</h4>
-        // <p>We have a-${apartments.rooms} rooms</p>
-        // <p>We live in ${apartments.flor} floor</p>
-        // <p>The price is ${apartments.price} NIS</p>
-        // </div>
-        // `;
-        // })
-        // .join(" ");
-        // // console.log(`htmlApartments ${html}`);
-        // const element = document.querySelector(".apartments");
-        // if (!element) throw new Error("Couldnt find element in the DOM");
-        // element.innerHTML = html;
-     } catch (error) {
-        console.error(error);
-     }
+        console.log("apartmenNames");
+        
+        for(let i=0; i < apartmentProfils.length; i++){
+            if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
+                console.log(apartmentProfils[i].apartmentName)
+                const html = 
+                    `<div class="ditail__box">
+                    <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
+                    <img class="ditail__box__img"
+                    src= ${apartmentProfils[i].apartmentImages[0]} alt="roommate Img">
+                    <h4>${apartmentProfils[i].city}</h4>
+                    <p>The address  - ${apartmentProfils[i].address}</p>
+                    <p>The apartment city - ${apartmentProfils[i].city} city</p>
+                    <p>The apartment area -  ${apartmentProfils[i].area} area</p>
+                    <p>Animal - ${apartmentProfils[i].animal}</p>
+                    <p>Smoke - ${apartmentProfils[i].smoke} </p>
+                    <p>We live in ${apartmentProfils[i].flor} flor</p>
+                    <p>We have ${apartmentProfils[i].rooms} rooms</p>
+                    <p>The number of parters - ${apartmentProfils[i].partersNo} parters</p>
+                    <p>The price is - ${apartmentProfils[i].price} NIS</p>
+                    </div>`;
+        
+        console.log(`html ${html}`);
+        const element = document.getElementById("ditails");
+        if (!element) throw new Error("Couldnt find element in the DOM");
+        element.innerHTML = html;
+        element.style.display = "block"
+        document.getElementById("containerApartment")!.style.display = "none"
+        }
+    }
+    } catch (error) {
+    console.error(error);   
+    }
 }
