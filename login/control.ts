@@ -1,3 +1,4 @@
+
 // Get the login and password input fields and the login button
 const loginInput = document.getElementById("mail") as HTMLInputElement;
 const passwordInput = document.getElementById("password") as HTMLInputElement;
@@ -44,7 +45,13 @@ myButton.addEventListener("click", function() {
      
      // TODO: Add logic to redirect the user to the main app page
    } else {
-     console.log("Login failed. Invalid login or password.");
+
+  const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+
+  const errorMessage = "Login failed. Invalid login or password.";
+  errorMessageElement.innerText = errorMessage;
+  console.log("Login failed. Invalid login or password. or No login data found")
+    //  console.log("Login failed. Invalid login or password. or No login data found");
    }
  } else {
    console.log("Login failed. No login data found.");
@@ -82,3 +89,12 @@ myButton.addEventListener("click", function() {
 //   localStorage.setItem("password", password);
 // });
 
+// function handleLogin() {
+//     const email = localStorage.getItem("email");
+//     const password = localStorage.getItem("password");
+  
+//     if (!email || !password) {
+//       setErrorMessage("Email or password not found.");
+//       return;
+//     }
+// }

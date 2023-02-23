@@ -34,7 +34,11 @@ if (myButton && loginInput && passwordInput)
                 // TODO: Add logic to redirect the user to the main app page
             }
             else {
-                console.log("Login failed. Invalid login or password.");
+                var errorMessageElement = document.getElementById('error-message');
+                var errorMessage = "Login failed. Invalid login or password.";
+                errorMessageElement.innerText = errorMessage;
+                console.log("Login failed. Invalid login or password. or No login data found");
+                //  console.log("Login failed. Invalid login or password. or No login data found");
             }
         }
         else {
@@ -64,3 +68,11 @@ if (myButton && loginInput && passwordInput)
 //   localStorage.setItem("mail", login);
 //   localStorage.setItem("password", password);
 // });
+// function handleLogin() {
+//     const email = localStorage.getItem("email");
+//     const password = localStorage.getItem("password");
+//     if (!email || !password) {
+//       setErrorMessage("Email or password not found.");
+//       return;
+//     }
+// }
