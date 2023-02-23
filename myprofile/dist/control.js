@@ -1,24 +1,18 @@
-var formData = { name: "", email: "", message: "" };
-var formDataList = [];
-var nameInput = document.querySelector("#name");
-var emailInput = document.querySelector("#email");
-var messageInput = document.querySelector("#message");
-var submitButton = document.querySelector("#submit-btn");
-if (submitButton) {
-    submitButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        formData.name = nameInput.value;
-        formData.email = emailInput.value;
-        formData.message = messageInput.value;
-        formDataList.push(formData);
-        localStorage.setItem("formDataList", JSON.stringify(formDataList));
-        nameInput.value = "";
-        emailInput.value = "";
-        messageInput.value = "";
-    });
-}
-// retrieve data from local storage
-var storedData = localStorage.getItem("formDataList");
-if (storedData) {
-    formDataList = JSON.parse(storedData);
-}
+var UserProfil = /** @class */ (function () {
+    function UserProfil(name, address, city, area, animal, smoke, flor, rooms, partersNo, price, imgSrc) {
+        this.name = name;
+        this.address = address;
+        this.city = city;
+        this.area = area;
+        this.animal = animal;
+        this.smoke = smoke;
+        this.flor = flor;
+        this.rooms = rooms;
+        this.partersNo = partersNo;
+        this.price = price;
+        this.imgSrc = imgSrc;
+        // this.uid = uid();
+    }
+    return UserProfil;
+}());
+var userProfils = [];
