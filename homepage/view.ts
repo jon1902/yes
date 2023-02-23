@@ -35,8 +35,8 @@ function renderApartment(){
         const html = apartmentProfils
            .map((apartments) => {
             return `
-            <div class="boxMain__container__boxes apartmentDiv">
-            <img class="boxMain__container__boxes__img"
+            <div class="boxMain__container__boxes apartmentDiv ">
+            <img class="boxMain__container__boxes__img ${apartments.apartmentName}"
              src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
             <h4>${apartments.city}</h4>
             <p>We have a-${apartments.rooms} rooms</p>

@@ -23,7 +23,7 @@ function renderApartment() {
             throw new Error("items is not an array");
         var html = apartmentProfils
             .map(function (apartments) {
-            return "\n            <div class=\"boxMain__container__boxes apartmentDiv\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + apartments.apartmentImages[0].urlPicture + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>We have a-" + apartments.rooms + " rooms</p>\n            <p>We live in " + apartments.flor + " floor</p>\n            <p>The price is " + apartments.price + " NIS</p>\n            </div>\n            ";
+            return "\n            <div class=\"boxMain__container__boxes apartmentDiv \">\n            <img class=\"boxMain__container__boxes__img " + apartments.apartmentName + "\"\n             src= " + apartments.apartmentImages[0].urlPicture + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>We have a-" + apartments.rooms + " rooms</p>\n            <p>We live in " + apartments.flor + " floor</p>\n            <p>The price is " + apartments.price + " NIS</p>\n            </div>\n            ";
         })
             .join(" ");
         // console.log(`htmlApartments ${html}`);

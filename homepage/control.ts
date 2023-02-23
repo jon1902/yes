@@ -32,6 +32,8 @@ roommateDivs.forEach((roommateDiv) =>{
 })
 apartmentDivs.forEach((apartmentDiv) =>{
     apartmentDiv.addEventListener("click", () => {
+        console.log(apartmentDiv.innerHTML);
+        
         handleShowAapartment(apartmentDiv.innerHTML)
 
     })
@@ -89,11 +91,11 @@ function hendelBtnBackToPage(){
 
 function handleShowAapartment(apartmenNames:string): void{
     try{
-        console.log("apartmenNames");
+        console.log(apartmenNames);
         
         for(let i=0; i < apartmentProfils.length; i++){
             if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
-                console.log(apartmentProfils[i].apartmentName)
+                console.log(apartmentProfils[i].apartmentImages[0])
                 const html = 
                     `<div class="ditail__box">
                     <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
