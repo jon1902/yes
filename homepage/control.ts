@@ -45,9 +45,11 @@ function handleShowRoommate(nameUser:string) : void{
         for(let i=0; i < userProfils.length; i++){
             if(nameUser.indexOf(userProfils[i].name) != -1){
                 console.log(userProfils[i].name)
-                const html = 
+                const html =    
                     `<div class="ditail__box">
-                    <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
+                    <div class="ditail__box_containerBtn">
+                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
+                    </div>
                     <img class="ditail__box__img"
                     src= ${userProfils[i].imgSrc} alt="roommate Img">
                     <h4>${userProfils[i].name}</h4>
@@ -67,8 +69,8 @@ function handleShowRoommate(nameUser:string) : void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        document.getElementById("containerBox")!.style.display = "none"
-        document.getElementById("containerApartment")!.style.display = "none"
+        document.getElementById("containerBox")!.style.opacity = "0.6"
+        document.getElementById("containerApartment")!.style.opacity = "0.6"
 
         }
     }
@@ -99,8 +101,11 @@ function handleShowAapartment(apartmenNames:string): void{
             if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
                                 
                 const html = 
-                    `<div class="ditail__box">
-                    <botton class="profilBtn" onclick="hendelBtnBackToPage()">X</botton>    
+                    `<div id="ditailBox" class="ditail__box ">
+                    <div class="ditail__box_containerBtn">
+                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton><br>    
+                    <botton class="profilBtn galleryBtn ditail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</botton>    
+                    </div>
                     <img class="ditail__box__img"
                     src= ${apartmentProfils[i].apartmentImages[0].urlPicture} alt="roommate Img">
                     <h4>${apartmentProfils[i].city}</h4>
@@ -120,11 +125,29 @@ function handleShowAapartment(apartmenNames:string): void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        document.getElementById("containerApartment")!.style.display = "none"
-        document.getElementById("containerBox")!.style.display = "none"
+        document.getElementById("containerApartment")!.style.opacity = "0.6"
+        document.getElementById("containerBox")!.style.opacity = "0.6"
         }
     }
     } catch (error) {
     console.error(error);   
     }
+}
+
+function hendelShowGallery(index:number): void{
+    try {
+        const element = document.getElementById("ditailBox");
+        if (!element) throw new Error("Couldnt find element in the DOM");
+        console.log(element);
+
+
+
+
+        
+        
+        
+    } catch (error) {
+        console.error(error)
+    }
+   
 }
