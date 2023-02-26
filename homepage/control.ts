@@ -1,7 +1,7 @@
 
 renderRoommate()
 renderApartment()
-
+let indexArray = 0
 
 const roommateBtn = document.querySelector(".roommateBtn") as HTMLButtonElement
 const apartmentBtn = document.querySelector(".apartmentBtn") as HTMLButtonElement
@@ -32,8 +32,6 @@ roommateDivs.forEach((roommateDiv) =>{
 })
 apartmentDivs.forEach((apartmentDiv) =>{
     apartmentDiv.addEventListener("click", () => {
-        console.log(apartmentDiv.innerHTML);
-        
         handleShowAapartment(apartmentDiv.innerHTML)
 
     })
@@ -44,7 +42,7 @@ function handleShowRoommate(nameUser:string) : void{
     try{
         for(let i=0; i < userProfils.length; i++){
             if(nameUser.indexOf(userProfils[i].name) != -1){
-                console.log(userProfils[i].name)
+                // console.log(userProfils[i].name)
                 const html =    
                     `<div class="ditail__box">
                     <div class="ditail__box_containerBtn">
@@ -64,7 +62,7 @@ function handleShowRoommate(nameUser:string) : void{
                     <p>Up to ${userProfils[i].price} NIS</p>
                     </div>`;
         
-        console.log(`html ${html}`);
+        // console.log(`html ${html}`);
         const element = document.getElementById("ditails");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
@@ -81,7 +79,7 @@ function handleShowRoommate(nameUser:string) : void{
 
 function hendelBtnBackToPage(){
     try {
-        console.log("backPage");
+        // console.log("backPage");
         
         const elementDitail = document.getElementById("ditails");
         if (!elementDitail) throw new Error("Couldnt find element in the DOM");
@@ -95,17 +93,16 @@ function hendelBtnBackToPage(){
 
 function handleShowAapartment(apartmenNames:string): void{
     try{
-        console.log(apartmenNames);
+        console.log(apartmenNames + " AAAAAAA");
         
         for(let i=0; i < apartmentProfils.length; i++){
             if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
-                                
                 const html = 
                     `<div id="ditailBox" class="ditail__box ">
                     <div class="ditail__box_containerBtn">
-                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton><br>    
+                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
                     <botton class="profilBtn galleryBtn ditail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</botton>    
-                    </div>
+                    </div><br>
                     <img class="ditail__box__img"
                     src= ${apartmentProfils[i].apartmentImages[0].urlPicture} alt="roommate Img">
                     <h4>${apartmentProfils[i].city}</h4>
@@ -120,7 +117,7 @@ function handleShowAapartment(apartmenNames:string): void{
                     <p>The price is - ${apartmentProfils[i].price} NIS</p>
                     </div>`;
         
-        console.log(`html ${html}`);
+        // console.log(`html ${html}`);
         const element = document.getElementById("ditails");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
@@ -136,18 +133,64 @@ function handleShowAapartment(apartmenNames:string): void{
 
 function hendelShowGallery(index:number): void{
     try {
-        const element = document.getElementById("ditailBox");
+        
+        const html = 
+        `<div id="ditailBox" class="ditail__box ">
+        <div class="ditail__box_containerBtn">
+            <botton class="profilBtn exitBtn ditail__box__containerBtn__btn" onclick="handleShowAapartment(${apartmentProfils[index].apartmentName})">X</botton>
+            <botton class="profilBtn backBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
+            <botton class="profilBtn NextBtn ditail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></botton>    
+        </div><br>
+            <img class="ditail__box__img apartmentImage"
+            src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
+        </div>`;
+
+        const element = document.getElementById("ditails");
         if (!element) throw new Error("Couldnt find element in the DOM");
-        console.log(element);
-
-
-
-
-        
-        
+        element.innerHTML = html;
+        element.style.display = "block"
+        document.getElementById("containerApartment")!.style.opacity = "0.6"
+        document.getElementById("containerBox")!.style.opacity = "0.6"
+        indexArray = 0
         
     } catch (error) {
         console.error(error)
     }
    
+}
+
+function hendelBtnBackImage(index:number): void{
+    try {
+        const element = document.querySelector(".apartmentImage") 
+        
+        if (!element) throw new Error("Couldnt find element in the DOM");        
+            if(indexArray === 0) {
+                indexArray = apartmentProfils[index].apartmentImages.length - 1
+            }else{
+                indexArray--
+           }
+        element.src = apartmentProfils[index].apartmentImages[indexArray].urlPicture     
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+function hendelBtnNextImage(index:number): void{
+    try {
+        const element = document.querySelector(".apartmentImage") 
+        
+        if (!element) throw new Error("Couldnt find element in the DOM");        
+ 
+        indexArray++
+            
+        if(indexArray === apartmentProfils[index].apartmentImages.length) 
+            indexArray = 0
+
+         element.src = apartmentProfils[index].apartmentImages[indexArray].urlPicture     
+       
+    } catch (error) {
+        console.error(error)
+    }
+
 }

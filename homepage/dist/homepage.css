@@ -153,11 +153,13 @@ p {
 }
 .ditail__box__containerBtn {
   position: absolute;
+  display: inline-block;
+  justify-content: space-between;
 }
 .ditail__box__containerBtn__btn {
   border: none;
   color: #fff;
-  font-size: 17px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 6px;
@@ -169,4 +171,10 @@ p {
   align-items: center;
   width: 150px;
   height: 150px;
+}
+
+.apartmentImage {
+  align-items: center;
+  width: 500px;
+  height: 500px;
 }

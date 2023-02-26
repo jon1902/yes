@@ -176,9 +176,11 @@ p{
         box-shadow: 9px 8px 15px 8px var(--blue);
         z-index: 99;        
         
+        
         &__containerBtn{
             position: absolute;
-
+            display: inline-block;
+            justify-content: space-between;
 
             &__btn{
                 // height: 50px;
@@ -186,7 +188,7 @@ p{
                 // margin:auto;
                 border: none;
                 color: #fff;
-                font-size: 17px;
+                font-size: 30px;
                 font-weight: 500;
                 letter-spacing: 1px;
                 border-radius: 6px;
@@ -206,3 +208,9 @@ p{
         }
     }
 
+    .apartmentImage{
+        align-items: center;
+        width: 500px;
+        height: 500px;
+
+    }
