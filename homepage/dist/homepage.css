@@ -38,14 +38,16 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 80px;
 }
 .header__container__logo {
-  padding-top: 5px;
+  height: 80px;
+  margin-right: 20px;
 }
 .header__container__a {
   color: var(--dark);
   text-decoration: none;
-  padding: 30px;
+  padding: 31px;
 }
 .header__container__a:hover {
   color: var(--white);
@@ -53,7 +55,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
