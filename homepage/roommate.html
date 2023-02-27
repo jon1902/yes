@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roomate</title>
+    <link rel="stylesheet" href="./dist/homepage.css">
+    <script src="./dist/helper.js" defer></script>
+    <script src="./dist/model.js" defer></script>
+    <script src="./dist/view.js" defer></script>
+    <script src="./dist/control.js" defer></script>
+    <script src="./dist/roommate.js" defer></script>
+    
 </head>
 <body>
-    <h1>Test</h1>
+    <div class="header box">
+        <div class="header__container container">
+            <div class="header__container__logo">
+                <img src="../logo/Yes-logo.png" alt="logo">
+            </div>
+            <nav>
+                <a class="header__container__a" href="#">My profile</a>
+                <a class="header__container__a" href="#">Publish Apartments</a>
+                <a class="header__container__a" href="#">Apartments</a>
+                <a class="header__container__a" href="#">Roommates</a>
+            </nav>
+        </div>
+    </div>
+
+    <div id="containerBox">
+        <div class="boxMain box">
+            <div class="halfBlue"></div>
+            <div class="boxMain__container box roommate">
+                <!-- the roommate show from typescript -->
+            </div>
+
+        </div>
+
+
+        <div class="btnDiv">
+            <button class="btnDiv__btn roommateBtn">Go to Home page</button>
+        </div>    
+
 </body>
 </html>

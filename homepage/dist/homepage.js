@@ -1,0 +1,2 @@
+renderRoommate();
+renderApartment();

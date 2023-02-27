@@ -1,7 +1,4 @@
 
-renderRoommate()
-renderApartment()
-let indexArray = 0
 
 const roommateBtn = document.querySelector(".roommateBtn") as HTMLButtonElement
 const apartmentBtn = document.querySelector(".apartmentBtn") as HTMLButtonElement
