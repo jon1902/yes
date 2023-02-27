@@ -1,3 +1,7 @@
+renderRoommate()
+renderApartment()
+
+let indexArray = 0
 
 
 const roommateBtn = document.querySelector(".roommateBtn") as HTMLButtonElement
@@ -24,6 +28,7 @@ apartmentBtn.addEventListener("click",() =>{
 
 roommateDivs.forEach((roommateDiv) =>{
     roommateDiv.addEventListener("click", () => {
+        console.log("roommateDiv");
         handleShowRoommate(roommateDiv.innerHTML)
     })
 })
@@ -37,6 +42,8 @@ apartmentDivs.forEach((apartmentDiv) =>{
 
 function handleShowRoommate(nameUser:string) : void{
     try{
+        console.log("XXXX");
+        
         for(let i=0; i < userProfils.length; i++){
             if(nameUser.indexOf(userProfils[i].name) != -1){
                 // console.log(userProfils[i].name)

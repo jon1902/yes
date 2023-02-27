@@ -1,3 +1,6 @@
+renderRoommate();
+renderApartment();
+var indexArray = 0;
 var roommateBtn = document.querySelector(".roommateBtn");
 var apartmentBtn = document.querySelector(".apartmentBtn");
 var roommateDivs = document.querySelectorAll(".roommateDiv");
@@ -20,6 +23,7 @@ apartmentBtn.addEventListener("click", function () {
 });
 roommateDivs.forEach(function (roommateDiv) {
     roommateDiv.addEventListener("click", function () {
+        console.log("roommateDiv");
         handleShowRoommate(roommateDiv.innerHTML);
     });
 });
@@ -30,6 +34,7 @@ apartmentDivs.forEach(function (apartmentDiv) {
 });
 function handleShowRoommate(nameUser) {
     try {
+        console.log("XXXX");
         for (var i = 0; i < userProfils.length; i++) {
             if (nameUser.indexOf(userProfils[i].name) != -1) {
                 // console.log(userProfils[i].name)
