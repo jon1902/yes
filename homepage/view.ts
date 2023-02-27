@@ -11,9 +11,9 @@ function renderRoommate(){
             <img class="boxMain__container__boxes__img"
              src= ${users.imgSrc} alt="roommate Img">
             <h4>${users.name}</h4>
-            <p>Looking in the ${users.area} area</p>
-            <p>Up to a rooms ${users.rooms}</p>
-            <p>Up to a floor ${users.flor}</p>
+            <p>Area: ${users.area}</p>
+            <p>Rooms: up to ${users.rooms}</p>
+            <p>floor: up to ${users.flor}</p>
             </div>
             `;
           })
@@ -40,9 +40,9 @@ function renderApartment(){
             <img class="boxMain__container__boxes__img ${apartments.apartmentName}"
              src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
             <h4>${apartments.city}</h4>
-            <p>We have a-${apartments.rooms} rooms</p>
-            <p>We live in ${apartments.flor} floor</p>
-            <p>The price is ${apartments.price} NIS</p>
+            <p>Rooms: ${apartments.rooms}</p>
+            <p>Floor: ${apartments.flor}</p>
+            <p>Price: ${apartments.price} NIS</p>
             </div>
             `;
           })
