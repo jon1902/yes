@@ -45,21 +45,22 @@ if (submitButton) {
         userProfil.imgSrc = imgSrcInput.value;
         UserProfilList.push(userProfil);
         localStorage.setItem("UserProfilList", JSON.stringify(UserProfilList));
-        nameInput.value = "";
-        adressInput.value = "";
-        cityInput.value = "";
-        areaInput.value = "";
-        animalInput.value = "";
-        smokeInput.value = "";
-        // florInput.value = "";
-        roomsInput.value = "";
-        // partersNoInput.value = "";
-        priceInput.value = "";
-        imgSrcInput.value = "";
+        // nameInput.value = "";
+        // adressInput.value = "";
+        // cityInput.value = "";
+        // areaInput.value = "";
+        // animalInput.value = "";
+        // smokeInput.value = "";
+        // // florInput.value = "";
+        // roomsInput.value = "";
+        // // partersNoInput.value = "";
+        // priceInput.value = "";
+        // imgSrcInput.value = "";
     });
 }
 // retrieve data from local storage
 var storedData = localStorage.getItem("UserProfilList");
+console.log(storedData);
 if (storedData) {
     UserProfilList = JSON.parse(storedData);
 }
