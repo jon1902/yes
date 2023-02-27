@@ -1,6 +1,3 @@
-renderRoommate();
-renderApartment();
-var indexArray = 0;
 var roommateBtn = document.querySelector(".roommateBtn");
 var apartmentBtn = document.querySelector(".apartmentBtn");
 var roommateDivs = document.querySelectorAll(".roommateDiv");

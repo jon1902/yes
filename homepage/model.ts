@@ -92,3 +92,4 @@ apartmentProfils.push(new ApartmentProfil('three', 'Herzel 30', 'Holon', 'All', 
 console.log(apartmentProfils)
 
 
+let indexArray = 0
