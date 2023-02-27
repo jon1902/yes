@@ -100,8 +100,8 @@ function handleShowAapartment(apartmenNames:string): void{
                 const html = 
                     `<div id="ditailBox" class="ditail__box ">
                     <div class="ditail__box_containerBtn">
-                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
-                    <botton class="profilBtn galleryBtn ditail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</botton>    
+                    <button class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</button>    
+                    <button class="profilBtn galleryBtn ditail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</button>    
                     </div><br>
                     <img class="ditail__box__img"
                     src= ${apartmentProfils[i].apartmentImages[0].urlPicture} alt="roommate Img">
@@ -137,9 +137,9 @@ function hendelShowGallery(index:number): void{
         const html = 
         `<div id="ditailBox" class="ditail__box ">
         <div class="ditail__box_containerBtn">
-            <botton class="profilBtn exitBtn ditail__box__containerBtn__btn" onclick="handleShowAapartment(${apartmentProfils[index].apartmentName})">X</botton>
-            <botton class="profilBtn backBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
-            <botton class="profilBtn NextBtn ditail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></botton>    
+            <button class="profilBtn exitBtn ditail__box__containerBtn__btn" onclick="handleShowAapartment('${apartmentProfils[index].apartmentName}')">X</button>
+            <button class="profilBtn backBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
+            <button class="profilBtn NextBtn ditail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
         </div><br>
             <img class="ditail__box__img apartmentImage"
             src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
