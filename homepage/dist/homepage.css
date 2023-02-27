@@ -42,7 +42,7 @@ body {
 }
 .header__container__logo {
   height: 80px;
-  margin-right: 250px;
+  margin-right: 20px;
 }
 .header__container__a {
   color: var(--dark);
