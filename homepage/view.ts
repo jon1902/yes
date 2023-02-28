@@ -31,7 +31,7 @@ function renderRoommate(){
 function renderApartment(){
     try {
         if (!ApartmentProfil || !Array.isArray(apartmentProfils))
-          throw new Error("items is not an array");
+          throw new Error("Items is not an array");
     
         const html = apartmentProfils
            .map((apartments) => {

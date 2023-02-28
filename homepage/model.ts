@@ -91,4 +91,3 @@ apartmentProfils.push(new ApartmentProfil('three', 'Herzel 30', 'Holon', 'All', 
 {id: uid(), urlPicture: 'https://icon2.cleanpng.com/20180304/oue/kisspng-kitchenware-animation-cartoon-pressure-cooker-kitchen-furniture-show-5a9bf02969c104.3227696815201690014332.jpg', imageName: "kitchen"}]))
 console.log(apartmentProfils)
 
-

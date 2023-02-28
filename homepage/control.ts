@@ -1,49 +1,43 @@
-renderRoommate()
-renderApartment()
 
-let indexArray = 0
-
-
-const roommateBtn = document.querySelector(".roommateBtn") as HTMLButtonElement
-const apartmentBtn = document.querySelector(".apartmentBtn") as HTMLButtonElement
-const roommateDivs = document.querySelectorAll(".roommateDiv") 
-const apartmentDivs = document.querySelectorAll(".apartmentDiv")
-
-roommateBtn.addEventListener("click",() =>{
-    try {
-        location.href = ('roommate.html')
-    } catch (error) {
-        console.error(error)        
-    }
-})
-
-apartmentBtn.addEventListener("click",() =>{
-    try {
-        location.href = ('apartmentBtn.html')
-        
-    } catch (error) {
-        console.error(error)        
-    }
-})
-
-roommateDivs.forEach((roommateDiv) =>{
-    roommateDiv.addEventListener("click", () => {
-        console.log("roommateDiv");
-        handleShowRoommate(roommateDiv.innerHTML)
+if(document.querySelector(".roommateBtn")){
+    const roommateBtn = document.querySelector(".roommateBtn") as HTMLButtonElement
+    roommateBtn.addEventListener("click",() =>{
+        try {
+            location.href = ('roommate.html')
+        } catch (error) {
+            console.error(error)        
+        }
     })
-})
-apartmentDivs.forEach((apartmentDiv) =>{
-    apartmentDiv.addEventListener("click", () => {
-        handleShowAapartment(apartmentDiv.innerHTML)
-
+}
+if(document.querySelector(".apartmentBtn")){
+    const apartmentBtn = document.querySelector(".apartmentBtn") as HTMLButtonElement
+    // const apartmentDivs = document.querySelectorAll(".apartmentDiv")
+    apartmentBtn.addEventListener("click",() =>{
+        try {
+            location.href = ('apartment.html')
+            
+        } catch (error) {
+            console.error(error)        
+        }
     })
-})
+}
+// roommateDivs.forEach((roommateDiv) =>{
+//     roommateDiv.addEventListener("click", () => {
+//         console.log("roommateDiv");
+//         handleShowRoommate(roommateDiv.innerHTML)
+//     })
+// })
+// apartmentDivs.forEach((apartmentDiv) =>{
+//     apartmentDiv.addEventListener("click", () => {
+//         handleShowAapartment(apartmentDiv.innerHTML)
+
+//     })
+// })
 
 
 function handleShowRoommate(nameUser:string) : void{
     try{
-        console.log("XXXX");
-        
+
         for(let i=0; i < userProfils.length; i++){
             if(nameUser.indexOf(userProfils[i].name) != -1){
                 // console.log(userProfils[i].name)
@@ -71,8 +65,11 @@ function handleShowRoommate(nameUser:string) : void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        document.getElementById("containerBox")!.style.opacity = "0.6"
-        document.getElementById("containerApartment")!.style.opacity = "0.6"
+        
+        if(document.getElementById("containerBox"))
+            document.getElementById("containerBox")!.style.opacity = "0.6"
+        if(document.getElementById("containerApartment"))
+            document.getElementById("containerApartment")!.style.opacity = "0.6"
 
         }
     }
@@ -97,8 +94,6 @@ function hendelBtnBackToPage(){
 
 function handleShowAapartment(apartmenNames:string): void{
     try{
-        console.log(apartmenNames + " AAAAAAA");
-        
         for(let i=0; i < apartmentProfils.length; i++){
             if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
                 const html = 
@@ -126,8 +121,10 @@ function handleShowAapartment(apartmenNames:string): void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        document.getElementById("containerApartment")!.style.opacity = "0.6"
-        document.getElementById("containerBox")!.style.opacity = "0.6"
+        if(document.getElementById("containerBox"))
+            document.getElementById("containerBox")!.style.opacity = "0.6"
+        if(document.getElementById("containerApartment"))
+            document.getElementById("containerApartment")!.style.opacity = "0.6"
         }
     }
     } catch (error) {
@@ -153,8 +150,10 @@ function hendelShowGallery(index:number): void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        document.getElementById("containerApartment")!.style.opacity = "0.6"
-        document.getElementById("containerBox")!.style.opacity = "0.6"
+        if(document.getElementById("containerBox"))
+            document.getElementById("containerBox")!.style.opacity = "0.6"
+        if(document.getElementById("containerApartment"))
+            document.getElementById("containerApartment")!.style.opacity = "0.6"
         indexArray = 0
         
     } catch (error) {
