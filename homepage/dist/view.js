@@ -20,7 +20,7 @@ function renderRoommate() {
 function renderApartment() {
     try {
         if (!ApartmentProfil || !Array.isArray(apartmentProfils))
-            throw new Error("items is not an array");
+            throw new Error("Items is not an array");
         var html = apartmentProfils
             .map(function (apartments) {
             return "\n            <div class=\"boxMain__container__boxes apartmentDiv \">\n            <img class=\"boxMain__container__boxes__img " + apartments.apartmentName + "\"\n             src= " + apartments.apartmentImages[0].urlPicture + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>Rooms: " + apartments.rooms + "</p>\n            <p>Floor: " + apartments.flor + "</p>\n            <p>Price: " + apartments.price + " NIS</p>\n            </div>\n            ";
