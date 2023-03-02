@@ -44,7 +44,7 @@ body {
   margin-right: 20px;
 }
 .header__container__a {
-  color: var(--dark);
+  color: var(--blue);
   text-decoration: none;
   padding: 31px;
 }
@@ -86,6 +86,7 @@ body {
 .boxMain__container__boxes__img {
   width: 80px;
   height: 80px;
+  border-radius: 50%;
 }
 
 p {

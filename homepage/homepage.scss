@@ -19,7 +19,7 @@
 
 body{
     background-image: url("/pictures/roomates.jpeg");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -55,7 +55,7 @@ body{
 
         &__a{
 
-            color: var(--dark);
+            color: var(--blue);
             text-decoration: none;
             padding: 31px
         }
@@ -109,6 +109,7 @@ body{
             &__img{
                 width: 80px;
                 height: 80px;
+                border-radius: 50%;
             }
         }
     }
