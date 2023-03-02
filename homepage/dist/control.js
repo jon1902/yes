@@ -21,17 +21,6 @@ if (document.querySelector(".apartmentBtn")) {
         }
     });
 }
-// roommateDivs.forEach((roommateDiv) =>{
-//     roommateDiv.addEventListener("click", () => {
-//         console.log("roommateDiv");
-//         handleShowRoommate(roommateDiv.innerHTML)
-//     })
-// })
-// apartmentDivs.forEach((apartmentDiv) =>{
-//     apartmentDiv.addEventListener("click", () => {
-//         handleShowAapartment(apartmentDiv.innerHTML)
-//     })
-// })
 function handleShowRoommate(nameUser) {
     try {
         for (var i = 0; i < userProfils.length; i++) {

@@ -165,6 +165,9 @@ p{
     font-size: 30px;
     // margin-left: 40px;
     min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 1rem;
     z-index: 99;    
 
     &__box{
@@ -173,7 +176,9 @@ p{
         min-height: inherit;
         padding: 32px;
         color: var(--dark);
-        
+        width: 500px;
+        float: left;
+
         align-items: center;
         width: 50%;
         background: var(--white);
