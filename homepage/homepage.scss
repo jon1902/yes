@@ -18,12 +18,15 @@
 
 
 body{
-    background-image: url("/pictures/roomates.jpeg");
+    height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+   //  background-color:var(--white);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 .box{
     gap: 40px;
@@ -40,6 +43,9 @@ body{
     min-height: 80px;
     background: var(--white);
     // border: 3px solid var(--dark);
+    position: fixed;
+    top: 0;
+    width: 100%;
    
     &__container{
         display: flex;
@@ -55,7 +61,7 @@ body{
 
         &__a{
 
-            color: var(--dark);
+            color: var(--blue);
             text-decoration: none;
             padding: 31px
         }
@@ -80,7 +86,8 @@ body{
     
     min-height: 300px;
     // background: var(--white);
-    
+    position: relative;
+    top: 30px;
 
     &__container{
         // position: relative;
@@ -110,6 +117,7 @@ body{
             &__img{
                 width: 80px;
                 height: 80px;
+                border-radius: 50%;
             }
         }
     }
