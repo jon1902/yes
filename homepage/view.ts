@@ -1,13 +1,21 @@
 
-function renderRoommate(){
+function renderRoommate(indexStart:number, indexEnd:number):void{
     try {
         if (!UserProfil || !Array.isArray(userProfils))
-          throw new Error("items is not an array");
-    
-        const html = userProfils
+          throw new Error("Items is not an array");
+        
+        let tempUserProfiles:UserProfil[] = []
+        
+        console.log(`indexStart ${indexStart} indexEnd ${indexEnd}`);
+        
+        for(let i = indexStart; i < indexEnd; i++){
+            tempUserProfiles.push(new UserProfil(userProfils[i].name, userProfils[i].address, userProfils[i].city, userProfils[i].area,userProfils[i].animal, userProfils[i].smoke, userProfils[i].flor, userProfils[i].rooms, userProfils[i].partersNo, userProfils[i].price, userProfils[i].imgSrc))
+        }
+
+        const html = tempUserProfiles
            .map((users) => {
             return `
-            <div class="boxMain__container__boxes roommateDiv">
+            <div class="boxMain__container__boxes roommateDiv roommatePage__container">
             <img class="boxMain__container__boxes__img"
              src= ${users.imgSrc} alt="roommate Img">
             <h4>${users.name}</h4>

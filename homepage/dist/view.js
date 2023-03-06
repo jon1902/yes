@@ -1,10 +1,15 @@
-function renderRoommate() {
+function renderRoommate(indexStart, indexEnd) {
     try {
         if (!UserProfil || !Array.isArray(userProfils))
-            throw new Error("items is not an array");
-        var html = userProfils
+            throw new Error("Items is not an array");
+        var tempUserProfiles = [];
+        console.log("indexStart " + indexStart + " indexEnd " + indexEnd);
+        for (var i = indexStart; i < indexEnd; i++) {
+            tempUserProfiles.push(new UserProfil(userProfils[i].name, userProfils[i].address, userProfils[i].city, userProfils[i].area, userProfils[i].animal, userProfils[i].smoke, userProfils[i].flor, userProfils[i].rooms, userProfils[i].partersNo, userProfils[i].price, userProfils[i].imgSrc));
+        }
+        var html = tempUserProfiles
             .map(function (users) {
-            return "\n            <div class=\"boxMain__container__boxes roommateDiv\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + users.imgSrc + " alt=\"roommate Img\">\n            <h4>" + users.name + "</h4>\n            <p>Area: " + users.area + "</p>\n            <p>Rooms: up to " + users.rooms + "</p>\n            <p>floor: up to " + users.flor + "</p>\n            </div>\n            ";
+            return "\n            <div class=\"boxMain__container__boxes roommateDiv roommatePage__container\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + users.imgSrc + " alt=\"roommate Img\">\n            <h4>" + users.name + "</h4>\n            <p>Area: " + users.area + "</p>\n            <p>Rooms: up to " + users.rooms + "</p>\n            <p>floor: up to " + users.flor + "</p>\n            </div>\n            ";
         })
             .join(" ");
         // console.log(`html ${html}`);

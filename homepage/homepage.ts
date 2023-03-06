@@ -1,7 +1,7 @@
 
-// pageName = "homepage"
+const homepageName = "homepage"
 
-renderRoommate()
+renderRoommate(userProfils.length-4 ,userProfils.length)
 renderApartment()
 
 let indexArray = 0
@@ -11,14 +11,6 @@ const roommateBtnHomepage = document.querySelector(".roommateBtn") as HTMLButton
 const apartmentBtnHomepage = document.querySelector(".apartmentBtn") as HTMLButtonElement
 const roommateDivsHomepage = document.querySelectorAll(".roommateDiv") 
 const apartmentDivsHomepage = document.querySelectorAll(".apartmentDiv")
-
-// roommateBtnHomepage.addEventListener("click",() =>{
-//     try {
-//         location.href = ('roommate.html')
-//     } catch (error) {
-//         console.error(error)        
-//     }
-// })
 
 
 roommateDivsHomepage.forEach((roommateDivHomepage) =>{

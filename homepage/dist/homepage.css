@@ -60,7 +60,6 @@ body {
 
 .boxMain {
   min-height: 300px;
-  position: relative;
 }
 .boxMain__container {
   max-width: 1200px;
@@ -75,7 +74,7 @@ body {
   cursor: pointer;
 }
 .boxMain__container__boxes {
-  width: 30%;
+  width: 300%;
   background: var(--white);
   text-align: center;
   padding: 16px;
@@ -86,6 +85,16 @@ body {
 .boxMain__container__boxes__img {
   width: 80px;
   height: 80px;
+}
+
+.roommatePage {
+  margin-left: 170px;
+  display: grid;
+  grid-template-rows: 90%;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(4, 240px);
+  row-gap: 70px;
+  column-gap: 80px;
 }
 
 p {
@@ -117,6 +126,16 @@ p {
   background-color: var(--blue);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.roommatePgaeBtn {
+  margin-top: 360px;
+}
+.roommatePgaeBtn__next {
+  margin-right: 500px;
+}
+.roommatePgaeBtn__back {
+  margin-left: 500px;
 }
 
 .profilBtn {
@@ -154,6 +173,7 @@ p {
   padding-left: 84px;
   box-shadow: 9px 8px 15px 8px var(--blue);
   box-shadow: 9px 8px 15px 8px var(--blue);
+  opacity: 0.99;
   z-index: 99;
 }
 .ditail__box__containerBtn {
