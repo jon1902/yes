@@ -13,12 +13,6 @@ var endPage = false;
 if (userProfils.length < 9)
     indexEnd = userProfils.length;
 renderRoommate(0, indexEnd);
-var roommatePageDivs = document.querySelectorAll(".roommateDiv");
-roommatePageDivs.forEach(function (roommatePageDiv) {
-    roommatePageDiv.addEventListener("click", function () {
-        handleShowRoommate(roommatePageDiv.innerHTML);
-    });
-});
 function hendleRoommateBackPage() {
     try {
         indexPage--;

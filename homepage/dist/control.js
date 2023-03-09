@@ -21,11 +21,24 @@ if (document.querySelector(".apartmentBtn")) {
         }
     });
 }
-function handleShowRoommate(nameUser) {
+function handleShowRoommateDitail() {
+    try {
+        var roommateDivsHomepage = document.querySelectorAll(".roommateDiv");
+        roommateDivsHomepage.forEach(function (roommateDivHomepage) {
+            roommateDivHomepage.addEventListener("click", function () {
+                var userName = roommateDivHomepage.innerHTML.slice(roommateDivHomepage.innerHTML.indexOf('<h4>') + 4, roommateDivHomepage.innerHTML.lastIndexOf('</h4>'));
+                handleShowRoommate(userName);
+            });
+        });
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+function handleShowRoommate(uid) {
     try {
         for (var i = 0; i < userProfils.length; i++) {
             if (nameUser.indexOf(userProfils[i].name) != -1) {
-                // console.log(userProfils[i].name)
                 var html = "<div class=\"ditail__box\">\n                    <div class=\"ditail__box_containerBtn\">\n                    <botton class=\"profilBtn ditail__box__containerBtn__btn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    </div>\n                    <img class=\"ditail__box__img\"\n                    src= " + userProfils[i].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + userProfils[i].name + "</h4>\n                    <p>My address is - " + userProfils[i].address + "</p>\n                    <p>I'm looking in - " + userProfils[i].city + " city</p>\n                    <p>I'm looking in -  " + userProfils[i].area + " area</p>\n                    <p>Animal - " + userProfils[i].animal + "</p>\n                    <p>Smoke - " + userProfils[i].smoke + " </p>\n                    <p>Up to  " + userProfils[i].flor + " flor</p>\n                    <p>Up to " + userProfils[i].rooms + " rooms</p>\n                    <p>Up to  " + userProfils[i].partersNo + " parters</p>\n                    <p>Up to " + userProfils[i].price + " NIS</p>\n                    </div>";
                 // console.log(`html ${html}`);
                 var element = document.getElementById("ditails");
@@ -33,10 +46,7 @@ function handleShowRoommate(nameUser) {
                     throw new Error("Couldnt find element in the DOM");
                 element.innerHTML = html;
                 element.style.display = "block";
-                if (document.getElementById("containerBox"))
-                    document.getElementById("containerBox").style.opacity = "0.6";
-                if (document.getElementById("containerApartment"))
-                    document.getElementById("containerApartment").style.opacity = "0.6";
+                break;
             }
         }
     }

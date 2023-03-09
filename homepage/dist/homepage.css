@@ -163,6 +163,7 @@ p {
   grid-template-columns: repeat(4, 100px);
   gap: 1rem;
   z-index: 99;
+  opacity: 1;
 }
 .ditail__box {
   max-width: 1300px;
@@ -174,13 +175,14 @@ p {
   float: left;
   align-items: center;
   width: 50%;
-  background: var(--white);
   text-align: left;
   padding-left: 84px;
   box-shadow: 9px 8px 15px 8px var(--blue);
   box-shadow: 9px 8px 15px 8px var(--blue);
-  opacity: 0.99;
+  opacity: 1;
   z-index: 99;
+  opacity: 100%;
+  background: var(--white);
 }
 .ditail__box__containerBtn {
   position: absolute;
@@ -202,6 +204,11 @@ p {
   align-items: center;
   width: 150px;
   height: 150px;
+}
+
+#ditails {
+  opacity: 1;
+  opacity: 100%;
 }
 
 .apartmentImage {

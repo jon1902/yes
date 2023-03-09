@@ -32,7 +32,7 @@ class UserProfil {
     public imgSrc: string,
     
   ) {
-    // this.uid = uid();
+    this.uid = uid();
   }
 }
 const userProfils:UserProfil[] = [];

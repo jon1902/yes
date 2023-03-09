@@ -13,12 +13,6 @@ const roommateDivsHomepage = document.querySelectorAll(".roommateDiv")
 const apartmentDivsHomepage = document.querySelectorAll(".apartmentDiv")
 
 
-roommateDivsHomepage.forEach((roommateDivHomepage) =>{
-    roommateDivHomepage.addEventListener("click", () => {
-        console.log("roommateDivHomepage");
-        handleShowRoommate(roommateDivHomepage.innerHTML)
-    })
-})
 
 apartmentDivsHomepage.forEach((apartmentDivHomepage) =>{
     apartmentDivHomepage.addEventListener("click", () => {
