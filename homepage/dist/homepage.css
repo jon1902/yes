@@ -63,10 +63,14 @@ body {
   margin: 0 auto;
 }
 
+#containerBox {
+  top: 5px;
+}
+
 .boxMain {
   min-height: 300px;
   position: relative;
-  top: 30px;
+  top: 40px;
 }
 .boxMain__container {
   max-width: 1200px;

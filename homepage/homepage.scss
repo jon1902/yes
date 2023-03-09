@@ -87,13 +87,15 @@ body{
     margin: 0 auto;
 }
 
-
+#containerBox{
+    top: 5px;
+}
 .boxMain{
     
     min-height: 300px;
     // background: var(--white);
     position: relative;
-    top: 30px;
+    top: 40px;
 
     &__container{
         // position: relative;
