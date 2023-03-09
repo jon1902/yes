@@ -12,8 +12,6 @@
 /* End of Variables */
 /* ===== Google Font Import - Poformsins ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -26,47 +24,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.header {
-  margin: 0%;
-  min-height: 80px;
-  background: var(--white);
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.header__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-}
-.header__container__logo {
-  height: 80px;
-  margin-right: 20px;
-}
-.header__container__a {
-  color: var(--blue);
-  text-decoration: none;
-  padding: 31px;
-  height: 80px;
-}
-.header__container__a:hover {
-  color: var(--white);
-  background: var(--blue);
-}
-
-.box {
-  gap: 40px;
-  width: 100%;
-  padding: 0 16px;
-  margin-top: 0px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .container1 {
@@ -83,8 +40,9 @@ body {
 
 .forms {
   display: flex;
+  width: 900px;
   align-items: center;
-  height: 1000px;
+  height: 950px;
   width: 200%;
   transition: height 0.2s ease;
 }
