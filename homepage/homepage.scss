@@ -59,15 +59,17 @@ body{
         justify-content: space-around;
         align-items: center;
         height: 80px;
+        width: 100%;
         
         &__logo{
+        position: absolute;
+        left: 320px;
         height: 80px;
-        margin-right: 20px;
+        
         
         }
 
         &__a{
-
             color: var(--blue);
             text-decoration: none;
             padding: 31px
@@ -84,7 +86,7 @@ body{
 }
 
 .container{
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -278,3 +280,20 @@ p{
         height: 500px;
 
     }
+
+    .log-reg{
+        display: flex;
+        position:absolute;
+        left: 30px;
+        
+    }
+    .button-link{
+            background-color: rgb(255, 255, 255);
+            color: var(--blue);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;          
+    }
+
+
+    
