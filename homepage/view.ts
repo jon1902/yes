@@ -10,8 +10,6 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
         
         for(let i = indexStart; i < indexEnd; i++){
             tempUserProfiles.push(userProfils[i])
-            // console.log(tempUserProfiles[i].uid);
-            // console.log(userProfils[i].uid);
             
           }
 

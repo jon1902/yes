@@ -6,8 +6,6 @@ function renderRoommate(indexStart, indexEnd) {
         console.log("indexStart " + indexStart + " indexEnd " + indexEnd);
         for (var i = indexStart; i < indexEnd; i++) {
             tempUserProfiles.push(userProfils[i]);
-            // console.log(tempUserProfiles[i].uid);
-            // console.log(userProfils[i].uid);
         }
         var html = tempUserProfiles
             .map(function (users) {
