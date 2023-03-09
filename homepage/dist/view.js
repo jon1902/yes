@@ -1,11 +1,11 @@
 function renderRoommate(indexStart, indexEnd) {
     try {
-        if (!UserProfil || !Array.isArray(userProfils))
+        if (!User || !Array.isArray(users))
             throw new Error("Items is not an array");
         var tempUserProfiles = [];
         console.log("indexStart " + indexStart + " indexEnd " + indexEnd);
         for (var i = indexStart; i < indexEnd; i++) {
-            tempUserProfiles.push(userProfils[i]);
+            tempUserProfiles.push(users[i]);
         }
         var html = tempUserProfiles
             .map(function (users) {
