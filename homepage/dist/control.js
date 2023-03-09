@@ -21,34 +21,53 @@ if (document.querySelector(".apartmentBtn")) {
         }
     });
 }
-function handleShowRoommateDitail() {
-    try {
-        var roommateDivsHomepage = document.querySelectorAll(".roommateDiv");
-        roommateDivsHomepage.forEach(function (roommateDivHomepage) {
-            roommateDivHomepage.addEventListener("click", function () {
-                var userName = roommateDivHomepage.innerHTML.slice(roommateDivHomepage.innerHTML.indexOf('<h4>') + 4, roommateDivHomepage.innerHTML.lastIndexOf('</h4>'));
-                handleShowRoommate(userName);
-            });
-        });
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
+// function handleShowRoommateDitail(){
+//     try {
+//     const roommateDivsHomepage = document.querySelectorAll(".roommateDiv") 
+//     roommateDivsHomepage.forEach((roommateDivHomepage) =>{
+//         roommateDivHomepage.addEventListener("click", () => {
+//             const userName = roommateDivHomepage.innerHTML.slice(roommateDivHomepage.innerHTML.indexOf('<h4>') + 4, roommateDivHomepage.innerHTML.lastIndexOf('</h4>'))
+//             handleShowRoommate(userName)
+//         })
+//     })
+//     } catch (error) {
+//         console.error(error)        
+//     }
+// }
 function handleShowRoommate(uid) {
     try {
-        for (var i = 0; i < userProfils.length; i++) {
-            if (nameUser.indexOf(userProfils[i].name) != -1) {
-                var html = "<div class=\"ditail__box\">\n                    <div class=\"ditail__box_containerBtn\">\n                    <botton class=\"profilBtn ditail__box__containerBtn__btn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    </div>\n                    <img class=\"ditail__box__img\"\n                    src= " + userProfils[i].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + userProfils[i].name + "</h4>\n                    <p>My address is - " + userProfils[i].address + "</p>\n                    <p>I'm looking in - " + userProfils[i].city + " city</p>\n                    <p>I'm looking in -  " + userProfils[i].area + " area</p>\n                    <p>Animal - " + userProfils[i].animal + "</p>\n                    <p>Smoke - " + userProfils[i].smoke + " </p>\n                    <p>Up to  " + userProfils[i].flor + " flor</p>\n                    <p>Up to " + userProfils[i].rooms + " rooms</p>\n                    <p>Up to  " + userProfils[i].partersNo + " parters</p>\n                    <p>Up to " + userProfils[i].price + " NIS</p>\n                    </div>";
-                // console.log(`html ${html}`);
-                var element = document.getElementById("ditails");
-                if (!element)
-                    throw new Error("Couldnt find element in the DOM");
-                element.innerHTML = html;
-                element.style.display = "block";
-                break;
-            }
-        }
+        // for(let i=0; i < userProfils.length; i++){
+        var indexUid = userProfils.findIndex(function (userUid) { return userUid.uid === uid; });
+        console.log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+        console.log(uid);
+        console.log(userProfils[0].uid);
+        console.log(indexUid);
+        //         const html =    
+        //                 `<div class="ditail__box">
+        //                 <div class="ditail__box_containerBtn">
+        //                 <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
+        //                 </div>
+        //                 <img class="ditail__box__img"
+        //                 src= ${userProfils[i].imgSrc} alt="roommate Img">
+        //                 <h4>${userProfils[i].name}</h4>
+        //                 <p>My address is - ${userProfils[i].address}</p>
+        //                 <p>I'm looking in - ${userProfils[i].city} city</p>
+        //                 <p>I'm looking in -  ${userProfils[i].area} area</p>
+        //                 <p>Animal - ${userProfils[i].animal}</p>
+        //                 <p>Smoke - ${userProfils[i].smoke} </p>
+        //                 <p>Up to  ${userProfils[i].flor} flor</p>
+        //                 <p>Up to ${userProfils[i].rooms} rooms</p>
+        //                 <p>Up to  ${userProfils[i].partersNo} parters</p>
+        //                 <p>Up to ${userProfils[i].price} NIS</p>
+        //                 </div>`;
+        //     // console.log(`html ${html}`);
+        //     const element = document.getElementById("ditails");
+        //     if (!element) throw new Error("Couldnt find element in the DOM");
+        //     element.innerHTML = html;
+        //     element.style.display = "block"
+        //     break        
+        //     }
+        // }
     }
     catch (error) {
         console.error(error);

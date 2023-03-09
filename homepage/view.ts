@@ -15,7 +15,7 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
         const html = tempUserProfiles
            .map((users) => {
             return `
-            <div class="boxMain__container__boxes roommateDiv roommatePage__container"  onclick="handleShowRoommateDitail('${users.uid}')">
+            <div class="boxMain__container__boxes roommateDiv roommatePage__container"  onclick="handleShowRoommate('${users.uid}')">
             <img class="boxMain__container__boxes__img"
              src= ${users.imgSrc} alt="roommate Img">
             <h4>${users.name}</h4>
