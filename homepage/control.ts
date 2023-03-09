@@ -41,8 +41,7 @@ if(document.querySelector(".apartmentBtn")){
 function handleShowRoommate(uid:string) : void{
     try{
            const indexUid = userProfils.findIndex(userUid => userUid.uid === uid);
-            console.log("indexUid");
-            console.log(indexUid);
+            if (indexUid === -1) throw new Error("The element donwt found")
             
             const html =    
                     `<div class="ditail__box">

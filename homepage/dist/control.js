@@ -37,8 +37,8 @@ if (document.querySelector(".apartmentBtn")) {
 function handleShowRoommate(uid) {
     try {
         var indexUid = userProfils.findIndex(function (userUid) { return userUid.uid === uid; });
-        console.log("indexUid");
-        console.log(indexUid);
+        if (indexUid === -1)
+            throw new Error("The element donwt found");
         var html = "<div class=\"ditail__box\">\n                    <div class=\"ditail__box_containerBtn\">\n                    <botton class=\"profilBtn ditail__box__containerBtn__btn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    </div>\n                    <img class=\"ditail__box__img\"\n                    src= " + userProfils[indexUid].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + userProfils[indexUid].name + "</h4>\n                    <p>My address is - " + userProfils[indexUid].address + "</p>\n                    <p>I'm looking in - " + userProfils[indexUid].city + " city</p>\n                    <p>I'm looking in -  " + userProfils[indexUid].area + " area</p>\n                    <p>Animal - " + userProfils[indexUid].animal + "</p>\n                    <p>Smoke - " + userProfils[indexUid].smoke + " </p>\n                    <p>Up to  " + userProfils[indexUid].flor + " flor</p>\n                    <p>Up to " + userProfils[indexUid].rooms + " rooms</p>\n                    <p>Up to  " + userProfils[indexUid].partersNo + " parters</p>\n                    <p>Up to " + userProfils[indexUid].price + " NIS</p>\n                    </div>";
         // console.log(`html ${html}`);
         var element = document.getElementById("ditails");

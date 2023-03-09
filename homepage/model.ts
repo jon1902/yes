@@ -1,11 +1,25 @@
 class User {
   uid: string;
-     
+  public address: string;
+  public city: string;
+  public area: string;
+  public animal: string;
+  public smoke: string;
+  public flor: string;
+  public rooms: string;
+  public partersNo: string;
+  public price: string;
+  public imgSrc: string;
+
   constructor(
     public name: string,
     public password: string,
   ) {
     this.uid = uid();
+  }
+
+  addMoreDetails(options){
+    
   }
 }
 
@@ -33,7 +47,7 @@ class UserProfil {
     public imgSrc: string,
     
   ) {
-    this.uid = uid();
+    // this.uid = uid();
   }
 }
 const userProfils:UserProfil[] = [];

@@ -4,6 +4,8 @@ var User = /** @class */ (function () {
         this.password = password;
         this.uid = uid();
     }
+    User.prototype.addMoreDetails = function (options) {
+    };
     return User;
 }());
 var users = [];
@@ -24,7 +26,7 @@ var UserProfil = /** @class */ (function () {
         this.partersNo = partersNo;
         this.price = price;
         this.imgSrc = imgSrc;
-        this.uid = uid();
+        // this.uid = uid();
     }
     return UserProfil;
 }());
