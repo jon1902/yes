@@ -8,6 +8,7 @@ class User {
     this.uid = uid();
   }
 }
+
 const users:User[] = [];
 
 users.push(new User('Elon Musk',"121314"))
