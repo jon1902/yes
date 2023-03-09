@@ -1,7 +1,7 @@
 var User = /** @class */ (function () {
-    function User(name, password) {
-        this.name = name;
-        this.password = password;
+    function User(userName, passWord) {
+        this.userName = userName;
+        this.passWord = passWord;
         this.uid = uid();
     }
     Object.defineProperty(User.prototype, "address", {
