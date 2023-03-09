@@ -35,7 +35,7 @@ function handleShowRoommateDitail() {
         console.error(error);
     }
 }
-function handleShowRoommate(nameUser) {
+function handleShowRoommate(uid) {
     try {
         for (var i = 0; i < userProfils.length; i++) {
             if (nameUser.indexOf(userProfils[i].name) != -1) {

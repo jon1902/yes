@@ -37,7 +37,7 @@ function handleShowRoommateDitail(){
     }
 }
 
-function handleShowRoommate(nameUser:string) : void{
+function handleShowRoommate(uid:string) : void{
     try{
 
         for(let i=0; i < userProfils.length; i++){

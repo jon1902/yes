@@ -24,7 +24,7 @@ var UserProfil = /** @class */ (function () {
         this.partersNo = partersNo;
         this.price = price;
         this.imgSrc = imgSrc;
-        // this.uid = uid();
+        this.uid = uid();
     }
     return UserProfil;
 }());
