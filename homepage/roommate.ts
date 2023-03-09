@@ -22,16 +22,6 @@ if(userProfils.length < 9)
 
 renderRoommate(0, indexEnd)
 
-
-const roommatePageDivs = document.querySelectorAll(".roommateDiv") 
-
-roommatePageDivs.forEach((roommatePageDiv) =>{
-    roommatePageDiv.addEventListener("click", () => {
-        handleShowRoommate(roommatePageDiv.innerHTML)
-       
-    })
-})
-
 function hendleRoommateBackPage(){
     try{
         indexPage--
@@ -64,10 +54,12 @@ function chekPage(){
         
         if(indexPage * 8 < indexEnd){
           renderRoommate(((indexPage) * 8) ,indexEnd)
+          
         }else{
             endPage = true
             indexPage--
-        }    
+        } 
+   
     } catch (error) {
         console.error(error)
     }

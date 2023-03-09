@@ -21,13 +21,27 @@ if(document.querySelector(".apartmentBtn")){
         }
     })
 }
-
+function handleShowRoommateDitail(){
+    try {
+        
+    const roommateDivsHomepage = document.querySelectorAll(".roommateDiv") 
+    
+    roommateDivsHomepage.forEach((roommateDivHomepage) =>{
+        roommateDivHomepage.addEventListener("click", () => {
+            const userName = roommateDivHomepage.innerHTML.slice(roommateDivHomepage.innerHTML.indexOf('<h4>') + 4, roommateDivHomepage.innerHTML.lastIndexOf('</h4>'))
+            handleShowRoommate(userName)
+        })
+    })
+    } catch (error) {
+        console.error(error)        
+    }
+}
 
 function handleShowRoommate(nameUser:string) : void{
     try{
+
         for(let i=0; i < userProfils.length; i++){
             if(nameUser.indexOf(userProfils[i].name) != -1){
-                // console.log(userProfils[i].name)
                 const html =    
                     `<div class="ditail__box">
                     <div class="ditail__box_containerBtn">
@@ -52,13 +66,9 @@ function handleShowRoommate(nameUser:string) : void{
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
-        
-        if(document.getElementById("containerBox"))
-            document.getElementById("containerBox")!.style.opacity = "0.6"
-        if(document.getElementById("containerApartment"))
-            document.getElementById("containerApartment")!.style.opacity = "0.6"
-
+        break        
         }
+
     }
     } catch (error) {
         console.error(error);
