@@ -9,27 +9,19 @@ if (document.querySelector(".registrationBtn")) {
         }
     });
 }
-set;
-address(address, string);
-{
-    this._address = address;
-}
-setDetails(options, Options);
-{
-    var city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, flor = options.flor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
-    if (city)
-        this.city = city;
-    if (area)
-        this.area = area;
-}
-var nameInput = document.querySelector("#name");
-var adressInput = document.querySelector("#adress");
-var cityInput = document.querySelector("#city");
-var areaInput = document.querySelector("#area");
-var animalInput = document.querySelector("#animal");
-var smokeInput = document.querySelector("#smoke");
-var roomsInput = document.querySelector("#rooms");
-var priceInput = document.querySelector("#price");
-var imgSrcInput = document.querySelector("#imgSrc");
-userProfils.push(new UserProfil(nameInput, adressInput, cityInput, areaInput, animalInput, smokeInput, '', roomsInput, '', priceInput, imgSrcInput));
-localStorage.setItem("UserProfilList", JSON.stringify(userProfils));
+// set address(address:string){
+//     this._address = address;
+//   }
+//   setDetails(options:Options){
+//     const {city, area, animal, smoke, flor, rooms, partersNo,price, imgSrc} = options;
+//     if(city) this.city = city;
+//     if(area) this.area = area;
+//   }
+var _name = document.querySelector("#name");
+var _email = document.querySelector("#email");
+var _tel = document.querySelector("#tel");
+var _username = document.querySelector("#username");
+var _password = document.querySelector("#password");
+var newUser = new User(_username.value, _password.value);
+newUser.setDetails({ name: _name.value, tel: _tel.value, eMail: _email.value });
+// localStorage.setItem("UserProfilList", JSON.stringify(userProfils));
