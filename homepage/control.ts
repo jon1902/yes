@@ -40,7 +40,7 @@ if(document.querySelector(".apartmentBtn")){
 
 function handleShowRoommate(uid:string) : void{
     try{
-           const indexUid = userProfils.findIndex(userUid => userUid.uid === uid);
+           const indexUid = users.findIndex(userUid => userUid.uid === uid);
             if (indexUid === -1) throw new Error("The element donwt found")
             
             const html =    
@@ -49,17 +49,17 @@ function handleShowRoommate(uid:string) : void{
                     <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
                     </div>
                     <img class="ditail__box__img"
-                    src= ${userProfils[indexUid].imgSrc} alt="roommate Img">
-                    <h4>${userProfils[indexUid].name}</h4>
-                    <p>My address is - ${userProfils[indexUid].address}</p>
-                    <p>I'm looking in - ${userProfils[indexUid].city} city</p>
-                    <p>I'm looking in -  ${userProfils[indexUid].area} area</p>
-                    <p>Animal - ${userProfils[indexUid].animal}</p>
-                    <p>Smoke - ${userProfils[indexUid].smoke} </p>
-                    <p>Up to  ${userProfils[indexUid].flor} flor</p>
-                    <p>Up to ${userProfils[indexUid].rooms} rooms</p>
-                    <p>Up to  ${userProfils[indexUid].partersNo} parters</p>
-                    <p>Up to ${userProfils[indexUid].price} NIS</p>
+                    src= ${users[indexUid].imgSrc} alt="roommate Img">
+                    <h4>${users[indexUid].name}</h4>
+                    <p>My address is - ${users[indexUid].address}</p>
+                    <p>I'm looking in - ${users[indexUid].city} city</p>
+                    <p>I'm looking in -  ${users[indexUid].area} area</p>
+                    <p>Animal - ${users[indexUid].animal}</p>
+                    <p>Smoke - ${users[indexUid].smoke} </p>
+                    <p>Up to  ${users[indexUid].flor} flor</p>
+                    <p>Up to ${users[indexUid].rooms} rooms</p>
+                    <p>Up to  ${users[indexUid].partersNo} parters</p>
+                    <p>Up to ${users[indexUid].price} NIS</p>
                     </div>`;
         
         // console.log(`html ${html}`);

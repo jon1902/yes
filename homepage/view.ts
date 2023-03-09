@@ -1,15 +1,15 @@
 
 function renderRoommate(indexStart:number, indexEnd:number):void{
     try {
-        if (!UserProfil || !Array.isArray(userProfils))
+        if (!User || !Array.isArray(users))
           throw new Error("Items is not an array");
         
-        let tempUserProfiles:UserProfil[] = []
+        let tempUserProfiles:User[] = []
         
         console.log(`indexStart ${indexStart} indexEnd ${indexEnd}`);
         
         for(let i = indexStart; i < indexEnd; i++){
-            tempUserProfiles.push(userProfils[i])
+            tempUserProfiles.push(users[i])
             
           }
 

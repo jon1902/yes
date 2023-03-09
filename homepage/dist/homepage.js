@@ -1,5 +1,5 @@
 var homepageName = "homepage";
-renderRoommate(userProfils.length - 4, userProfils.length);
+renderRoommate(users.length - 4, users.length);
 renderApartment();
 var indexArray = 0;
 var roommateBtnHomepage = document.querySelector(".roommateBtn");
