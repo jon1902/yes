@@ -6,12 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./dist/view.js" defer></script>
     <script src="./dist/helpers.js" defer></script>
-    <script src="./dist/model.js" defer></script>
+    <script src="./homepage/dist/model.js" defer></script>
     <script src="./dist/control.js" defer></script>
     <link rel="stylesheet" href="./dist/registration.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>help</h1>
+
+<body  background="../pictures/roomates.jpeg">
+    <div class="header box">
+        <div class="header__container container">
+            <div class="header__container__logo">
+                <img src="../pictures/Yes-logo.png" alt="logo">
+            </div>
+            <nav>
+                <a class="header__container__a" href="../homepage/homepage.html">Homepage</a>
+                <a class="header__container__a" href="../myprofile/myprofile.html">My profile</a>
+                <a class="header__container__a" href="../registration/registartion.html">Publish Apartments</a>
+                <a class="header__container__a" href="../homepage/apartment.html">Apartments</a>
+                <a class="header__container__a" href="../homepage/roommate.html">Roommates</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Regisration</span>
+                <form action="#">
+
+                    <div class="input-field">
+                        <input type="text"  id="name" placeholder="Enter your name" required>
+                        <i class="input-field__uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="adress" placeholder="Enter your adress" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" id="city" placeholder="Enter your city" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" id="area" placeholder="Enter your area" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" id="animal" placeholder="Enter your animal" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" id="smoke" placeholder="Enter if your smoke" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                        <div class="option">
+                            <label>
+                              <input type="checkbox" id="choice-radio" name="yes">
+                              yes
+                            </label>
+                            <label>
+                              <input type="checkbox" id="choice-radio">
+                              No
+                            </label>
+                          </div>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <input type="number" id="rooms" placeholder="Enter how many rooms" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="input-field">
+                        <input type="number" id="price" placeholder="Enter your price" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+
+                    <div class="input-field">
+                        <input type="url" id="imgSrc" placeholder="Enter your image" required>
+                        <i class="input-field__uil uil-lock icon"></i>
+                        <!-- <i class="input-field__uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div id="error-message"></div>
+
+                    <div class="btnDiv">
+                        <button class="btnDiv__btn registrationBtn">Submit</button>
+               
+                </form>
+               
+            
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
