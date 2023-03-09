@@ -40,43 +40,37 @@ if(document.querySelector(".apartmentBtn")){
 
 function handleShowRoommate(uid:string) : void{
     try{
-
-        // for(let i=0; i < userProfils.length; i++){
-            const indexUid = userProfils.findIndex(userUid => userUid.uid === uid);
-            console.log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
-            console.log(uid);
-            console.log(userProfils[0].uid);
-            
+           const indexUid = userProfils.findIndex(userUid => userUid.uid === uid);
+            console.log("indexUid");
             console.log(indexUid);
             
-    //         const html =    
-    //                 `<div class="ditail__box">
-    //                 <div class="ditail__box_containerBtn">
-    //                 <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
-    //                 </div>
-    //                 <img class="ditail__box__img"
-    //                 src= ${userProfils[i].imgSrc} alt="roommate Img">
-    //                 <h4>${userProfils[i].name}</h4>
-    //                 <p>My address is - ${userProfils[i].address}</p>
-    //                 <p>I'm looking in - ${userProfils[i].city} city</p>
-    //                 <p>I'm looking in -  ${userProfils[i].area} area</p>
-    //                 <p>Animal - ${userProfils[i].animal}</p>
-    //                 <p>Smoke - ${userProfils[i].smoke} </p>
-    //                 <p>Up to  ${userProfils[i].flor} flor</p>
-    //                 <p>Up to ${userProfils[i].rooms} rooms</p>
-    //                 <p>Up to  ${userProfils[i].partersNo} parters</p>
-    //                 <p>Up to ${userProfils[i].price} NIS</p>
-    //                 </div>`;
+            const html =    
+                    `<div class="ditail__box">
+                    <div class="ditail__box_containerBtn">
+                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
+                    </div>
+                    <img class="ditail__box__img"
+                    src= ${userProfils[indexUid].imgSrc} alt="roommate Img">
+                    <h4>${userProfils[indexUid].name}</h4>
+                    <p>My address is - ${userProfils[indexUid].address}</p>
+                    <p>I'm looking in - ${userProfils[indexUid].city} city</p>
+                    <p>I'm looking in -  ${userProfils[indexUid].area} area</p>
+                    <p>Animal - ${userProfils[indexUid].animal}</p>
+                    <p>Smoke - ${userProfils[indexUid].smoke} </p>
+                    <p>Up to  ${userProfils[indexUid].flor} flor</p>
+                    <p>Up to ${userProfils[indexUid].rooms} rooms</p>
+                    <p>Up to  ${userProfils[indexUid].partersNo} parters</p>
+                    <p>Up to ${userProfils[indexUid].price} NIS</p>
+                    </div>`;
         
-    //     // console.log(`html ${html}`);
-    //     const element = document.getElementById("ditails");
-    //     if (!element) throw new Error("Couldnt find element in the DOM");
-    //     element.innerHTML = html;
-    //     element.style.display = "block"
-    //     break        
-    //     }
+        // console.log(`html ${html}`);
+        const element = document.getElementById("ditails");
+        if (!element) throw new Error("Couldnt find element in the DOM");
+        element.innerHTML = html;
+        element.style.display = "block"
+            
+        
 
-    // }
     } catch (error) {
         console.error(error);
     }

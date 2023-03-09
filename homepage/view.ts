@@ -9,8 +9,11 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
         console.log(`indexStart ${indexStart} indexEnd ${indexEnd}`);
         
         for(let i = indexStart; i < indexEnd; i++){
-            tempUserProfiles.push(new UserProfil(userProfils[i].name, userProfils[i].address, userProfils[i].city, userProfils[i].area,userProfils[i].animal, userProfils[i].smoke, userProfils[i].flor, userProfils[i].rooms, userProfils[i].partersNo, userProfils[i].price, userProfils[i].imgSrc))
-        }
+            tempUserProfiles.push(userProfils[i])
+            // console.log(tempUserProfiles[i].uid);
+            // console.log(userProfils[i].uid);
+            
+          }
 
         const html = tempUserProfiles
            .map((users) => {
