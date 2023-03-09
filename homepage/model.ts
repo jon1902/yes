@@ -1,4 +1,7 @@
 interface Options{
+   name?:string;
+   tel?:string;
+   eMail?: string;
    city?: string;
    area?: string;
    animal?: string;
@@ -12,7 +15,9 @@ interface Options{
 
 class User {
   public uid: string = uid();
-  private _address: string;
+  public name:string;
+  public tel:string;
+  public eMail: string;
   public city: string;
   public area: string;
   public animal: string;
@@ -23,7 +28,7 @@ class User {
   public price: string;
   public imgSrc: string;
 
-  constructor(public name: string, public password: string) {}
+  constructor(public userName: string, public passWord: string) {}
 
   set address(address:string){
     this._address = address;
