@@ -9,6 +9,19 @@ if (document.querySelector(".registrationBtn")) {
         }
     });
 }
+set;
+address(address, string);
+{
+    this._address = address;
+}
+setDetails(options, Options);
+{
+    var city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, flor = options.flor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
+    if (city)
+        this.city = city;
+    if (area)
+        this.area = area;
+}
 var nameInput = document.querySelector("#name");
 var adressInput = document.querySelector("#adress");
 var cityInput = document.querySelector("#city");

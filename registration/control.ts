@@ -9,7 +9,17 @@ if(document.querySelector(".registrationBtn")){
     })
 }
 
+set address(address:string){
+    this._address = address;
+  }
 
+  setDetails(options:Options){
+    const {city, area, animal, smoke, flor, rooms, partersNo,price, imgSrc} = options;
+    if(city) this.city = city;
+    if(area) this.area = area;
+  }
+
+  
 const nameInput = document.querySelector("#name") as HTMLInputElement;
 const adressInput = document.querySelector("#adress") as HTMLInputElement;
 const cityInput = document.querySelector("#city") as HTMLInputElement;
