@@ -87,7 +87,8 @@ body {
 }
 .boxMain__container__boxes {
   width: 300%;
-  background: var(--white);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
   text-align: center;
   padding: 16px;
   box-shadow: 9px 8px 15px 8px var(--dark);
@@ -124,7 +125,7 @@ p {
 
 .btnDiv {
   display: flex;
-  margin: 30px;
+  margin: 70px;
 }
 .btnDiv__btn {
   height: 50px;
