@@ -4,26 +4,42 @@ var User = /** @class */ (function () {
         this.passWord = passWord;
         this.uid = uid();
     }
-    Object.defineProperty(User.prototype, "address", {
-        set: function (address) {
-            this._address = address;
-        },
-        enumerable: false,
-        configurable: true
-    });
+    // set address(address:string){
+    //   this._address = address;
+    // }
     User.prototype.setDetails = function (options) {
-        var city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, flor = options.flor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
+        var name = options.name, tel = options.tel, eMail = options.eMail, city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, flor = options.flor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
+        if (name)
+            this.name = name;
+        if (tel)
+            this.tel = tel;
+        if (eMail)
+            this.eMail = eMail;
         if (city)
             this.city = city;
         if (area)
             this.area = area;
+        if (animal)
+            this.animal = animal;
+        if (smoke)
+            this.smoke = smoke;
+        if (flor)
+            this.flor = flor;
+        if (rooms)
+            this.rooms = rooms;
+        if (partersNo)
+            this.partersNo = partersNo;
+        if (price)
+            this.price = price;
+        if (imgSrc)
+            this.imgSrc = imgSrc;
     };
     return User;
 }());
 var users = [];
-var kjsdfhgkjdhfgkjdhfgj = new User("Moshe", "123");
-kjsdfhgkjdhfgkjdhfgj.address = "Nevo";
-kjsdfhgkjdhfgkjdhfgj.setDetails({ city: "Cahir", area: "Egypt" });
+// const kjsdfhgkjdhfgkjdhfgj:User = new User("Moshe","123");
+// kjsdfhgkjdhfgkjdhfgj.address = "Nevo"
+// kjsdfhgkjdhfgkjdhfgj.setDetails({city:"Cahir",area:"Egypt"})
 users.push(new User("Elon Musk", "121314"));
 users.push(new User("Tim Cook", "233445"));
 users.push(new User("Bill Gates", "344546"));
