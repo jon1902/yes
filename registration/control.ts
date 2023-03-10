@@ -18,7 +18,5 @@ const _password = document.querySelector("#password") as HTMLInputElement;
 const _newUser:User = new User(_username.value,_password.value);
 _newUser.setDetails({name:_name.value,tel:_tel.value,eMail:_email.value})
 
-
-
-    // localStorage.setItem("UserProfilList", JSON.stringify(userProfils));
+localStorage.setItem('newUser', JSON.stringify(_newUser));
   
