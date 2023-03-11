@@ -13,11 +13,22 @@ if (regSubmitButton) {
             tel: _tel.value,
             eMail: _email.value
         });
+<<<<<<< HEAD
         var registraionNewUsers = [];
         if (registraionNewUsers) {
             registraionNewUsers.push(_newUser);
             localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
             console.log(registraionNewUsers);
+=======
+        var userFromStorg = window.localStorage.getItem('registraionNewUsers');
+        if (userFromStorg != null) {
+            var registraionNewUsers = JSON.parse(userFromStorg);
+            if (registraionNewUsers) {
+                registraionNewUsers.push(_newUser);
+                localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
+                console.log(registraionNewUsers);
+            }
+>>>>>>> 0bcb56b2d5936b5a41a544b1b7bb5f42e51b00c5
         }
     });
     //   regSubmitButton.addEventListener("click", function () {
