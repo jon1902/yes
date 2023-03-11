@@ -17,13 +17,18 @@ if (regSubmitButton) {
       tel: _tel.value,
       eMail: _email.value,
     });
+    const registraionNewUsers:any[] = []
 
-    users.push(_newUser);
-
+    if(registraionNewUsers){
+    registraionNewUsers.push(_newUser);
+    
     localStorage.setItem("registraionNewUsers", JSON.stringify(users));
+    console.log(registraionNewUsers)
+    }
   });
 
-  regSubmitButton.addEventListener("click", function () {
-    window.location.assign("../homepage/homepage.html");
-  });
+//   regSubmitButton.addEventListener("click", function () {
+//     window.location.assign("../homepage/homepage.html");
+//   });
 }
+

@@ -35,6 +35,7 @@ myButton.addEventListener("click", function() {
  const loginToCheck = loginInput.value;
  const passwordToCheck = passwordInput.value;
 
+
  // Get the stored login and password data from local storage
  const storedData = localStorage.getItem("loginData");
 
@@ -69,18 +70,18 @@ myButton.addEventListener("click", function() {
 
 
 
-//  If login data exists in local storage, parse it from the JSON string
+// //  If login data exists in local storage, parse it from the JSON string
 // if (loginDataString) {
 //   loginData = JSON.parse(loginDataString);
 // }
 
-//  Push the new login data item into the array
+// //  Push the new login data item into the array
 // loginData.push({ login, password });
 
-// Convert the updated login data array to a JSON string
+// // Convert the updated login data array to a JSON string
 // const updatedLoginDataString = JSON.stringify(loginData);
 
-//  Save the updated JSON string back to local storage
+// //  Save the updated JSON string back to local storage
 // localStorage.setItem("loginData", updatedLoginDataString);
 
 //  Check if the login and password data exists in the array
