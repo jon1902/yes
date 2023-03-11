@@ -31,7 +31,7 @@ if(userFromStorg != null){
 }
 
 
-console.log(users.length);
+// console.log(users.length);
 
 let indexEnd = 8
 let indexPage = 0
@@ -63,7 +63,7 @@ function hendleRoommateNextPage(){
 }
 
 
-function chekPage(){
+function chekPage():void{
     try {
         if(!users) throw new Error("The array is empty")
         endPage = false

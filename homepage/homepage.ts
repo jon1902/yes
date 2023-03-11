@@ -2,7 +2,7 @@
 const homepageName = "homepage"
 
 renderRoommate(users.length-4 ,users.length)
-renderApartment()
+renderApartment(apartmentProfils.length-3 ,apartmentProfils.length)
 
 let indexArray = 0
 

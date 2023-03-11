@@ -154,7 +154,7 @@ class ApartmentProfil {
   uid: string;
 
   constructor(
-    public apartmentName: string,
+    // public apartmentName: string,
     public address: string,
     public city: string,
     public neighbour: string,
@@ -172,10 +172,12 @@ class ApartmentProfil {
 }
 
 const apartmentProfils: ApartmentProfil[] = [];
+const newApartment:ApartmentProfil[] = []
+const apartmentList:ApartmentProfil[] = []
 
 apartmentProfils.push(
   new ApartmentProfil(
-    "one",
+    // "one",
     "Herzel 5",
     "Tel aviv",
     "North",
@@ -216,7 +218,7 @@ apartmentProfils.push(
 );
 apartmentProfils.push(
   new ApartmentProfil(
-    "two",
+    // "two",
     "Negev",
     "Haifa",
     "Bat galim",
@@ -251,7 +253,7 @@ apartmentProfils.push(
 );
 apartmentProfils.push(
   new ApartmentProfil(
-    "three",
+    // "three",
     "Herzel 30",
     "Holon",
     "All",

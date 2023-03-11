@@ -21,7 +21,7 @@ if (userFromStorg != null) {
         users.push(newUser);
     });
 }
-console.log(users.length);
+// console.log(users.length);
 var indexEnd = 8;
 var indexPage = 0;
 var endPage = false;

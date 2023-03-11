@@ -27,10 +27,6 @@ function handleShowRoommate(uid:string) : void{
     try{
            const indexUid = users.findIndex(userUid => userUid.uid === uid);
             if (indexUid === -1) throw new Error("The element dont found")
-            console.log("NNNNNNNNNNNNNNNNNN");
-            console.log(uid);
-            console.log(indexUid);
-            console.log("NNNNNNNNNNNNNNNNNN");
               
             const html =    
                     `<div class="detail__box">
