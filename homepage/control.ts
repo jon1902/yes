@@ -85,7 +85,7 @@ function handleShowAapartment(uid:string): void{
                     <button class="profilBtn galleryBtn detail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</button>    
                     </div><br>
                     <img class="detail__box__img"
-                    src= ${apartmentProfils[indexUid].apartmentImages[0].urlPicture} alt="roommate Img">
+                    src= ${apartmentProfils[indexUid].apartmentImage} alt="roommate Img">
                     <h4>${apartmentProfils[indexUid].city}</h4>
                     <p>The address  - ${apartmentProfils[indexUid].address}</p>
                     <p>The apartment city - ${apartmentProfils[indexUid].city} city</p>
@@ -124,7 +124,7 @@ function hendelShowGallery(index:number): void{
             <button class="profilBtn NextBtn detail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
         </div><br>
             <img class="detail__box__img apartmentImage"
-            src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
+            src= ${apartmentProfils[index].apartmentImage} alt="roommate Img">
         </div>`;
 
         const element = document.getElementById("details");

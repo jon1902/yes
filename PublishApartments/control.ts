@@ -63,12 +63,13 @@
 
 
     }
-  });
+  )};
 
+  if(submitButton)
     submitButton.addEventListener("click", function() {
         // window.location.assign('../homepage/homepage.html');
     });
-  }
+  
   
   // retrieve data from local storage
   const storedData = localStorage.getItem("ApartmentList");
