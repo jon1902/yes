@@ -33,9 +33,9 @@ if(userFromStorg != null){
     }
   }});
 
-//   regSubmitButton.addEventListener("click", function () {
-//     window.location.assign("../homepage/homepage.html");
-//   });
+  regSubmitButton.addEventListener("click", function () {
+    window.location.assign("../homepage/homepage.html");
+  });
 }
 
 

@@ -23,9 +23,9 @@ if (regSubmitButton) {
             }
         }
     });
-    //   regSubmitButton.addEventListener("click", function () {
-    //     window.location.assign("../homepage/homepage.html");
-    //   });
+    regSubmitButton.addEventListener("click", function () {
+        window.location.assign("../homepage/homepage.html");
+    });
 }
 // if (submitButton) {
 //     submitButton.addEventListener("click", (e: Event) => {
