@@ -12,22 +12,13 @@ var submitButton = document.querySelector("#myButton");
 if (submitButton) {
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
-        newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, "", areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, 
-        // priceInput.value,
-        // imgSrcInput.value,
-        [
-            {
-                id: uid(),
-                urlPicture: imgSrcInput.value,
-                imageName: "out Apartment"
-            },
-        ]));
-        console.log("apartmentList");
-        console.log(apartmentList);
+        newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, "", areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value));
         var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
         if (apartmentFromStorg != null) {
             var apartmentList = JSON.parse(apartmentFromStorg);
             apartmentList.push(newApartment);
+            console.log("apartmentList");
+            console.log(apartmentList);
             localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
             // nameInput.value = "";
             adressInput.value = "";
@@ -43,7 +34,7 @@ if (submitButton) {
         }
     });
     submitButton.addEventListener("click", function () {
-        window.location.assign('../homepage/homepage.html');
+        // window.location.assign('../homepage/homepage.html');
     });
 }
 // retrieve data from local storage

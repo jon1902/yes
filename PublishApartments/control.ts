@@ -27,21 +27,10 @@
         roomsInput.value,
         partersNoInput.value,
         priceInput.value,
-        // priceInput.value,
-        // imgSrcInput.value,
-        
-      
-        [
-          {
-            id: uid(),
-            urlPicture: imgSrcInput.value,
-            imageName: "out Apartment",
-          },
-        ]
+        imgSrcInput.value,
       )
     )
-    console.log("apartmentList");
-    console.log(apartmentList);
+
     
     let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
 
@@ -50,6 +39,10 @@
         
 
     apartmentList.push(newApartment);
+
+    console.log("apartmentList");
+    console.log(apartmentList);
+
       localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
       // nameInput.value = "";
       adressInput.value = "";
@@ -67,7 +60,7 @@
     });
 
     submitButton.addEventListener("click", function() {
-        window.location.assign('../homepage/homepage.html');
+        // window.location.assign('../homepage/homepage.html');
     });
   }
   

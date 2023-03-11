@@ -29,7 +29,7 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
             `;
           })
           .join(" ");
-        // console.log(`html ${html}`);
+        console.log(`html ${html}`);
         const element = document.querySelector(".roommate");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
@@ -58,7 +58,7 @@ function renderApartment(indexStart:number, indexEnd:number):void{
             return `
             <div class="boxMain__container__boxes apartmentDiv" onclick="handleShowApartment('${apartments.uid}')">
             <img class="boxMain__container__boxes__img"
-             src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
+             src= ${apartments.apartmentImage} alt="roommate Img">
             <h4>${apartments.city}</h4>
             <p>Rooms: ${apartments.rooms}</p>
             <p>Floor: ${apartments.floor}</p>

@@ -14,7 +14,7 @@ function renderRoommate(indexStart, indexEnd) {
             return "\n            <div class=\"boxMain__container__boxes roommateDiv roommatePage__container\"  onclick=\"handleShowRoommate('" + users.uid + "')\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + users.imgSrc + " alt=\"roommate Img\">\n            <h4>" + users.userName + "</h4>\n            <p>Area: " + users.area + "</p>\n            <p>Rooms: up to " + users.rooms + "</p>\n            <p>floor: up to " + users.floor + "</p>\n            </div>\n            ";
         })
             .join(" ");
-        // console.log(`html ${html}`);
+        console.log("html " + html);
         var element = document.querySelector(".roommate");
         if (!element)
             throw new Error("Couldnt find element in the DOM");
@@ -37,7 +37,7 @@ function renderApartment(indexStart, indexEnd) {
         }
         var html = tempApartmentProfiles
             .map(function (apartments) {
-            return "\n            <div class=\"boxMain__container__boxes apartmentDiv\" onclick=\"handleShowApartment('" + apartments.uid + "')\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + apartments.apartmentImages[0].urlPicture + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>Rooms: " + apartments.rooms + "</p>\n            <p>Floor: " + apartments.floor + "</p>\n            <p>Price: " + apartments.price + " NIS</p>\n            </div>\n            ";
+            return "\n            <div class=\"boxMain__container__boxes apartmentDiv\" onclick=\"handleShowApartment('" + apartments.uid + "')\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + apartments.apartmentImage + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>Rooms: " + apartments.rooms + "</p>\n            <p>Floor: " + apartments.floor + "</p>\n            <p>Price: " + apartments.price + " NIS</p>\n            </div>\n            ";
         })
             .join(" ");
         // console.log(`htmlApartments ${html}`);
