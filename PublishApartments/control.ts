@@ -19,6 +19,7 @@
         new ApartmentProfil(
         adressInput.value,
         cityInput.value,
+        "",
         areaInput.value,
         animalInput.value,
         smokeInput.value,
@@ -26,7 +27,8 @@
         roomsInput.value,
         partersNoInput.value,
         priceInput.value,
-        imgSrcInput.value,
+        // priceInput.value,
+        // imgSrcInput.value,
         
       
         [
@@ -38,6 +40,9 @@
         ]
       )
     )
+    console.log("apartmentList");
+    console.log(apartmentList);
+    
     apartmentList.push(newApartment);
       localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
       // nameInput.value = "";
