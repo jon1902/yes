@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -234,7 +235,6 @@ p {
 }
 
 .button-link {
-  background-color: white;
   color: var(--blue);
   padding: 10px 20px;
   text-decoration: none;

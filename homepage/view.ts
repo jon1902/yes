@@ -11,8 +11,8 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
         for(let i = indexStart; i < indexEnd; i++){
             tempUserProfiles.push(users[i])
           }
-        console.log('tempUserProfiles');
-        console.log(tempUserProfiles);
+        // console.log('tempUserProfiles');
+        // console.log(tempUserProfiles);
         
           
         const html = tempUserProfiles
@@ -29,7 +29,7 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
             `;
           })
           .join(" ");
-        console.log(`html ${html}`);
+        // console.log(`html ${html}`);
         const element = document.querySelector(".roommate");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
@@ -39,16 +39,25 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
       }
 }
 
-function renderApartment(){
+function renderApartment(indexStart:number, indexEnd:number):void{
     try {
         if (!ApartmentProfil || !Array.isArray(apartmentProfils))
           throw new Error("Items is not an array");
-    
-        const html = apartmentProfils
+
+          let tempApartmentProfiles:ApartmentProfil[] = []
+
+          for(let i = indexStart; i < indexEnd; i++){
+            tempApartmentProfiles.push(apartmentProfils[i])
+            console.log('tempapartmentProfiles');
+            console.log(tempApartmentProfiles);
+            console.log(apartmentProfils[i]);
+          }
+      
+        const html = tempApartmentProfiles
            .map((apartments) => {
             return `
-            <div class="boxMain__container__boxes apartmentDiv" onclick="handleShowApartment('${apartments.uid}')>
-            <img class="boxMain__container__boxes__img ${apartments.apartmentName}"
+            <div class="boxMain__container__boxes apartmentDiv" onclick="handleShowApartment('${apartments.uid}')">
+            <img class="boxMain__container__boxes__img"
              src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
             <h4>${apartments.city}</h4>
             <p>Rooms: ${apartments.rooms}</p>

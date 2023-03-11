@@ -26,10 +26,6 @@ function handleShowRoommate(uid) {
         var indexUid = users.findIndex(function (userUid) { return userUid.uid === uid; });
         if (indexUid === -1)
             throw new Error("The element dont found");
-        console.log("NNNNNNNNNNNNNNNNNN");
-        console.log(uid);
-        console.log(indexUid);
-        console.log("NNNNNNNNNNNNNNNNNN");
         var html = "<div class=\"detail__box\">\n                    <div class=\"detail__box_containerBtn\">\n                    <botton class=\"profilBtn detail__box__containerBtn__btn\" onclick=\"hendelBtnBackToPage()\">X</botton>    \n                    </div>\n                    <img class=\"detail__box__img\"\n                    src= " + users[indexUid].imgSrc + " alt=\"roommate Img\">\n                    <h4>" + users[indexUid].userName + "</h4>\n                    <p>My address is - " + users[indexUid].address + "</p>\n                    <p>I'm looking in - " + users[indexUid].city + " city</p>\n                    <p>I'm looking in -  " + users[indexUid].area + " area</p>\n                    <p>Animal - " + users[indexUid].animal + "</p>\n                    <p>Smoke - " + users[indexUid].smoke + " </p>\n                    <p>Up to  " + users[indexUid].floor + " floor</p>\n                    <p>Up to " + users[indexUid].rooms + " rooms</p>\n                    <p>Up to  " + users[indexUid].partersNo + " parters</p>\n                    <p>Up to " + users[indexUid].price + " NIS</p>\n                    </div>";
         // console.log(`html ${html}`);
         var element = document.getElementById("details");
