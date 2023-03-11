@@ -52,6 +52,10 @@ class User {
     if(price) this.price = price;
     if(imgSrc) this.imgSrc = imgSrc;
   }
+
+
+
+  
 }
 
 const users: User[] = [];

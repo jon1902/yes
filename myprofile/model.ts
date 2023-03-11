@@ -15,10 +15,11 @@ class UserProfil {
       public imgSrc: string,
       
     ) {
-    //   this.uid = uid();
+      this.uid = uid();
     }
   }
   
+ 
   
   const userProfil: UserProfil = {uid:"", name: "", address: "", city: "",area: "",animal: "",smoke: "",flor: "",rooms: "",partersNo: "",price:"",imgSrc:""};
   let UserProfilList: UserProfil[] = [];
