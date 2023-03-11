@@ -33,14 +33,15 @@ if (submitButton) {
         priceInput.value = "";
         imgSrcInput.value = "";
     });
-    submitButton.addEventListener("click", function () {
-        window.location.assign('../homepage/homepage.html');
-    });
-}
-// retrieve data from local storage
-var storedData = localStorage.getItem("ApartmentList");
-// console.log("storedData")
-// console.log(storedData)
-if (storedData) {
-    UserProfilList = JSON.parse(storedData);
+    if (submitButton)
+        submitButton.addEventListener("click", function () {
+            window.location.assign('../homepage/homepage.html');
+        });
+    // retrieve data from local storage
+    var storedData = localStorage.getItem("ApartmentList");
+    // console.log("storedData")
+    // console.log(storedData)
+    if (storedData) {
+        UserProfilList = JSON.parse(storedData);
+    }
 }
