@@ -10,6 +10,7 @@
 }
 /* End of Variables */
 
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
 
     box-sizing: border-box;
@@ -20,6 +21,7 @@
 
 body{
     margin: 0;
+    padding: 0;
     height: 100vh;
     // display: flex;
     // align-items: center;
@@ -72,7 +74,8 @@ body{
         &__a{
             color: var(--blue);
             text-decoration: none;
-            padding: 31px
+            padding: 31px;
+            margin-r;
         }
         
         &__a:hover{
@@ -288,7 +291,7 @@ p{
         
     }
     .button-link{
-            background-color: rgb(255, 255, 255);
+
             color: var(--blue);
             padding: 10px 20px;
             text-decoration: none;
