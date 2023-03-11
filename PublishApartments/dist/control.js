@@ -15,28 +15,29 @@ if (submitButton) {
         newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, "", areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value));
         var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
         if (apartmentFromStorg != null) {
-            var apartmentList = JSON.parse(apartmentFromStorg);
-            apartmentList.push(newApartment);
-            console.log("apartmentList");
-            console.log(apartmentList);
-            localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
-            // nameInput.value = "";
-            adressInput.value = "";
-            cityInput.value = "";
-            areaInput.value = "";
-            animalInput.value = "";
-            smokeInput.value = "";
-            floorInput.value = "";
-            roomsInput.value = "";
-            partersNoInput.value = "";
-            priceInput.value = "";
-            imgSrcInput.value = "";
+            apartmentList = JSON.parse(apartmentFromStorg);
         }
-    });
-    submitButton.addEventListener("click", function () {
-        // window.location.assign('../homepage/homepage.html');
+        apartmentList.push(newApartment);
+        console.log("apartmentList");
+        console.log(apartmentList);
+        localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
+        // nameInput.value = "";
+        adressInput.value = "";
+        cityInput.value = "";
+        areaInput.value = "";
+        animalInput.value = "";
+        smokeInput.value = "";
+        floorInput.value = "";
+        roomsInput.value = "";
+        partersNoInput.value = "";
+        priceInput.value = "";
+        imgSrcInput.value = "";
     });
 }
+;
+submitButton.addEventListener("click", function () {
+    // window.location.assign('../homepage/homepage.html');
+});
 // retrieve data from local storage
 var storedData = localStorage.getItem("ApartmentList");
 // console.log("storedData")

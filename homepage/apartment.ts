@@ -29,7 +29,7 @@ if(apartmentFromStorg != null){
                   apartmentArrays.rooms,
                   apartmentArrays.partersNo,
                   apartmentArrays.price,
-                  apartmentArrays.apartmentImages[0].urlPicture,
+                  apartmentArrays.apartmentImage,
 
                 ))
             apartmentProfils.push(apartmentArrays)

@@ -174,7 +174,7 @@ class ApartmentProfil {
 
 const apartmentProfils: ApartmentProfil[] = [];
 let newApartment:ApartmentProfil[] = []
-const apartmentList:ApartmentProfil[] = []
+let apartmentList:ApartmentProfil[] = []
 
 
 apartmentProfils.push(

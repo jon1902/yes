@@ -12,11 +12,13 @@
   const submitButton = document.querySelector("#myButton");
   
   if (submitButton) {
+    
+    
     submitButton.addEventListener("click", (e: Event) => {
       e.preventDefault();
-
-      newApartment.push(
-        new ApartmentProfil(
+     
+    newApartment.push(
+      new ApartmentProfil(
         adressInput.value,
         cityInput.value,
         "",
@@ -29,15 +31,18 @@
         priceInput.value,
         imgSrcInput.value,
       )
-    )
+    );
 
     
+    
+    
     let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
-
-    if(apartmentFromStorg != null){
-        const apartmentList = JSON.parse(apartmentFromStorg)
         
-
+    if(apartmentFromStorg != null){
+        apartmentList = JSON.parse(apartmentFromStorg)
+    }
+    
+    
     apartmentList.push(newApartment);
 
     console.log("apartmentList");
