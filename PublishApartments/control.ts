@@ -43,6 +43,12 @@
     console.log("apartmentList");
     console.log(apartmentList);
     
+    let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
+
+    if(apartmentFromStorg != null){
+        const apartmentList = JSON.parse(apartmentFromStorg)
+        
+
     apartmentList.push(newApartment);
       localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
       // nameInput.value = "";

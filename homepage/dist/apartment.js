@@ -8,31 +8,12 @@
 var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
 if (apartmentFromStorg != null) {
     var apartmentArray = JSON.parse(apartmentFromStorg);
-    // let apartmentTemp:ApartmentProfil[] = []
-    // apartmentArray.forEach((apartmentArrays, index) => {
-    // apartmentProfils.push(
-    //     new ApartmentProfil(
-    console.log("tempDDDDDDDDDDDDDDdd");
-    console.log(apartmentArray);
-    for (var index = 0; index < apartmentArray.length; index++) {
-        // apartmentTemp[index] = apartmentArray[index]
-        // apartmentTemp[index].uid=apartmentArray[index].uid,
-        // apartmentTemp[index].address=apartmentArray[index].address,
-        // apartmentTemp[index].city = apartmentArray[index].city,
-        // apartmentTemp[index].neighbour = apartmentArray[index].neighbour,
-        // apartmentTemp[index].area = apartmentArray[index].area,
-        // apartmentTemp[index].animal = apartmentArray[index].animal,
-        // apartmentTemp[index].smoke = apartmentArray[index].smoke,
-        // apartmentTemp[index].floor = apartmentArray[index].floor,
-        // apartmentTemp[index].rooms = apartmentArray[index].rooms,
-        // apartmentTemp[index].partersNo = apartmentArray[index].partersNo,
-        // apartmentTemp[index].price = apartmentArray[index].price,
-        // apartmentTemp[index].apartmentImages[0].urlPicture = apartmentArray[index].apartmentImages[0].urlPicture,
-        apartmentProfils.push(apartmentArray[index]);
-        console.log('apartmentTemp[index]');
-        console.log(apartmentArray[index]);
-        console.log("EEEEEEEEEEEEEEEEEEEEEEEק");
-    }
+    apartmentArray.forEach(function (apartmentArrays) {
+        apartmentProfils.push(new ApartmentProfil(apartmentArrays.address, apartmentArrays.city, apartmentArrays.neighbour, apartmentArrays.area, apartmentArrays.animal, apartmentArrays.smoke, apartmentArrays.floor, apartmentArrays.rooms, apartmentArrays.partersNo, apartmentArrays.price, apartmentArrays.apartmentImages[0].urlPicture));
+        apartmentProfils.push(apartmentArrays);
+        console.log("QQQQQQQQQQQ");
+        console.log(apartmentProfils);
+    });
 }
 console.log('apartmentProfilsXXXXXXX');
 console.log(apartmentProfils);
