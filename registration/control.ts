@@ -1,22 +1,34 @@
-if(document.querySelector(".registrationBtn")){
-    const registrationBtn = document.querySelector(".registrationBtn") as HTMLButtonElement
-    registrationBtn.addEventListener("click",() =>{
-        try {
-            location.href = ('/homepage/homepage.html')
-        } catch (error) {
-            console.error(error)        
-        }
-    })
+
+const regSubmitButton = document.querySelector("#myButton");
+
+if (regSubmitButton) {
+  regSubmitButton.addEventListener("click", (e: Event) => {
+    e.preventDefault();
+    const _name = document.querySelector("#name") as HTMLInputElement;
+    const _email = document.querySelector("#email") as HTMLInputElement;
+    const _tel = document.querySelector("#tel") as HTMLInputElement;
+    const _username = document.querySelector("#username") as HTMLInputElement;
+    const _password = document.querySelector("#password") as HTMLInputElement;
+    
+    const _newUser: User = new User(_username.value, _password.value);
+
+    _newUser.setDetails({
+      name: _name.value,
+      tel: _tel.value,
+      eMail: _email.value,
+    });
+    const registraionNewUsers:any[] = []
+
+    if(registraionNewUsers){
+    registraionNewUsers.push(_newUser);
+    
+    localStorage.setItem("registraionNewUsers", JSON.stringify(users));
+    console.log(registraionNewUsers)
+    }
+  });
+
+//   regSubmitButton.addEventListener("click", function () {
+//     window.location.assign("../homepage/homepage.html");
+//   });
 }
 
-const _name = document.querySelector("#name") as HTMLInputElement;
-const _email = document.querySelector("#email") as HTMLInputElement;
-const _tel = document.querySelector("#tel") as HTMLInputElement;
-const _username = document.querySelector("#username") as HTMLInputElement;
-const _password = document.querySelector("#password") as HTMLInputElement;
-
-const _newUser:User = new User(_username.value,_password.value);
-_newUser.setDetails({name:_name.value,tel:_tel.value,eMail:_email.value})
-
-localStorage.setItem('newUser', JSON.stringify(_newUser));
-  
