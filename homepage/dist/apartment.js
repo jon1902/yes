@@ -8,10 +8,10 @@
 var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
 if (apartmentFromStorg != null) {
     var apartmentArray = JSON.parse(apartmentFromStorg);
+    console.log("VVVVVVVVVVVVVVVV");
+    console.log((apartmentArray));
     apartmentArray.forEach(function (apartmentArrays) {
-        apartmentProfils.push(new ApartmentProfil(
-        // "one",
-        apartmentArrays.address, apartmentArrays.city, apartmentArrays.neighbour, apartmentArrays.area, apartmentArrays.animal, apartmentArrays.smoke, apartmentArrays.floor, apartmentArrays.rooms, apartmentArrays.partersNo, apartmentArrays.price, apartmentArrays.apartmentImages[0]));
+        apartmentProfils.push(new ApartmentProfil(apartmentArrays.address, apartmentArrays.city, apartmentArrays.neighbour, apartmentArrays.area, apartmentArrays.animal, apartmentArrays.smoke, apartmentArrays.floor, apartmentArrays.rooms, apartmentArrays.partersNo, apartmentArrays.price, apartmentArrays.apartmentImages[0]));
         apartmentProfils.push(apartmentArrays);
         console.log("QQQQQQQQQQQ");
         console.log(apartmentProfils);

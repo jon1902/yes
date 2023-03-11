@@ -27,9 +27,17 @@
         partersNoInput.value,
         priceInput.value,
         imgSrcInput.value,
-        )
-        )
-
+        
+      
+        [
+          {
+            id: uid(),
+            urlPicture: imgSrcInput.value,
+            imageName: "out Apartment",
+          },
+        ]
+      )
+    )
     apartmentList.push(newApartment);
       localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
       // nameInput.value = "";

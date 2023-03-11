@@ -14,11 +14,13 @@ let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
 if(apartmentFromStorg != null){
 
     const apartmentArray = JSON.parse(apartmentFromStorg)
-    
+        console.log("VVVVVVVVVVVVVVVV");
+        console.log((apartmentArray));
+        
+        
         apartmentArray.forEach(apartmentArrays => {
             apartmentProfils.push(
                 new ApartmentProfil(
-                  // "one",
                   apartmentArrays.address,
                   apartmentArrays.city,
                   apartmentArrays.neighbour,
