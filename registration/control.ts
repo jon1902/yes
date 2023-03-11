@@ -31,7 +31,7 @@ if(userFromStorg != null){
     localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
     console.log(registraionNewUsers)
     }
-  });
+  }});
 
 //   regSubmitButton.addEventListener("click", function () {
 //     window.location.assign("../homepage/homepage.html");
