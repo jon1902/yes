@@ -22,48 +22,37 @@ if(document.querySelector(".apartmentBtn")){
         }
     })
 }
-// function handleShowRoommateDitail(){
-//     try {
-        
-//     const roommateDivsHomepage = document.querySelectorAll(".roommateDiv") 
-    
-//     roommateDivsHomepage.forEach((roommateDivHomepage) =>{
-//         roommateDivHomepage.addEventListener("click", () => {
-//             const userName = roommateDivHomepage.innerHTML.slice(roommateDivHomepage.innerHTML.indexOf('<h4>') + 4, roommateDivHomepage.innerHTML.lastIndexOf('</h4>'))
-//             handleShowRoommate(userName)
-//         })
-//     })
-//     } catch (error) {
-//         console.error(error)        
-//     }
-// }
 
 function handleShowRoommate(uid:string) : void{
     try{
            const indexUid = users.findIndex(userUid => userUid.uid === uid);
-            if (indexUid === -1) throw new Error("The element donwt found")
-            
+            if (indexUid === -1) throw new Error("The element dont found")
+            console.log("NNNNNNNNNNNNNNNNNN");
+            console.log(uid);
+            console.log(indexUid);
+            console.log("NNNNNNNNNNNNNNNNNN");
+              
             const html =    
-                    `<div class="ditail__box">
-                    <div class="ditail__box_containerBtn">
-                    <botton class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
+                    `<div class="detail__box">
+                    <div class="detail__box_containerBtn">
+                    <botton class="profilBtn detail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</botton>    
                     </div>
-                    <img class="ditail__box__img"
+                    <img class="detail__box__img"
                     src= ${users[indexUid].imgSrc} alt="roommate Img">
-                    <h4>${users[indexUid].name}</h4>
+                    <h4>${users[indexUid].userName}</h4>
                     <p>My address is - ${users[indexUid].address}</p>
                     <p>I'm looking in - ${users[indexUid].city} city</p>
                     <p>I'm looking in -  ${users[indexUid].area} area</p>
                     <p>Animal - ${users[indexUid].animal}</p>
                     <p>Smoke - ${users[indexUid].smoke} </p>
-                    <p>Up to  ${users[indexUid].flor} flor</p>
+                    <p>Up to  ${users[indexUid].floor} floor</p>
                     <p>Up to ${users[indexUid].rooms} rooms</p>
                     <p>Up to  ${users[indexUid].partersNo} parters</p>
                     <p>Up to ${users[indexUid].price} NIS</p>
                     </div>`;
         
         // console.log(`html ${html}`);
-        const element = document.getElementById("ditails");
+        const element = document.getElementById("details");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
@@ -79,7 +68,7 @@ function hendelBtnBackToPage(){
     try {
         // console.log("backPage");
         
-        const elementDitail = document.getElementById("ditails");
+        const elementDitail = document.getElementById("details");
         if (!elementDitail) throw new Error("Couldnt find element in the DOM");
         elementDitail.remove()
         location.reload()
@@ -89,32 +78,32 @@ function hendelBtnBackToPage(){
     }
 }
 
-function handleShowAapartment(apartmenNames:string): void{
+function handleShowAapartment(uid:string): void{
     try{
-        for(let i=0; i < apartmentProfils.length; i++){
-            if(apartmenNames.indexOf(apartmentProfils[i].apartmentName) != -1){
-                const html = 
-                    `<div id="ditailBox" class="ditail__box ">
-                    <div class="ditail__box_containerBtn">
-                    <button class="profilBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</button>    
-                    <button class="profilBtn galleryBtn ditail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</button>    
+        const indexUid = apartmentProfils.findIndex(apartmentUid => apartmentUid.uid === uid);
+        if (indexUid === -1) throw new Error("The element dont found")
+            const html = 
+                    `<div id="detailBox" class="detail__box ">
+                    <div class="detail__box_containerBtn">
+                    <button class="profilBtn detail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</button>    
+                    <button class="profilBtn galleryBtn detail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</button>    
                     </div><br>
-                    <img class="ditail__box__img"
-                    src= ${apartmentProfils[i].apartmentImages[0].urlPicture} alt="roommate Img">
-                    <h4>${apartmentProfils[i].city}</h4>
-                    <p>The address  - ${apartmentProfils[i].address}</p>
-                    <p>The apartment city - ${apartmentProfils[i].city} city</p>
-                    <p>The apartment area -  ${apartmentProfils[i].area} area</p>
-                    <p>Animal - ${apartmentProfils[i].animal}</p>
-                    <p>Smoke - ${apartmentProfils[i].smoke} </p>
-                    <p>We live in ${apartmentProfils[i].flor} flor</p>
-                    <p>We have ${apartmentProfils[i].rooms} rooms</p>
-                    <p>The number of parters - ${apartmentProfils[i].partersNo} parters</p>
-                    <p>The price is - ${apartmentProfils[i].price} NIS</p>
+                    <img class="detail__box__img"
+                    src= ${apartmentProfils[indexUid].apartmentImages[0].urlPicture} alt="roommate Img">
+                    <h4>${apartmentProfils[indexUid].city}</h4>
+                    <p>The address  - ${apartmentProfils[indexUid].address}</p>
+                    <p>The apartment city - ${apartmentProfils[indexUid].city} city</p>
+                    <p>The apartment area -  ${apartmentProfils[indexUid].area} area</p>
+                    <p>Animal - ${apartmentProfils[indexUid].animal}</p>
+                    <p>Smoke - ${apartmentProfils[indexUid].smoke} </p>
+                    <p>We live in ${apartmentProfils[indexUid].floor} floor</p>
+                    <p>We have ${apartmentProfils[indexUid].rooms} rooms</p>
+                    <p>The number of parters - ${apartmentProfils[indexUid].partersNo} parters</p>
+                    <p>The price is - ${apartmentProfils[indexUid].price} NIS</p>
                     </div>`;
         
         // console.log(`html ${html}`);
-        const element = document.getElementById("ditails");
+        const element = document.getElementById("details");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"
@@ -122,8 +111,7 @@ function handleShowAapartment(apartmenNames:string): void{
             document.getElementById("containerBox")!.style.opacity = "0.6"
         if(document.getElementById("containerApartment"))
             document.getElementById("containerApartment")!.style.opacity = "0.6"
-        }
-    }
+    
     } catch (error) {
     console.error(error);   
     }
@@ -133,17 +121,17 @@ function hendelShowGallery(index:number): void{
     try {
         
         const html = 
-        `<div id="ditailBox" class="ditail__box ">
-        <div class="ditail__box_containerBtn">
-            <button class="profilBtn exitBtn ditail__box__containerBtn__btn" onclick="handleShowAapartment('${apartmentProfils[index].apartmentName}')">X</button>
-            <button class="profilBtn backBtn ditail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
-            <button class="profilBtn NextBtn ditail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
+        `<div id="detailBox" class="detail__box ">
+        <div class="detail__box_containerBtn">
+            <button class="profilBtn exitBtn detail__box__containerBtn__btn" onclick="handleShowAapartment('${apartmentProfils[index].apartmentName}')">X</button>
+            <button class="profilBtn backBtn detail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
+            <button class="profilBtn NextBtn detail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
         </div><br>
-            <img class="ditail__box__img apartmentImage"
+            <img class="detail__box__img apartmentImage"
             src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
         </div>`;
 
-        const element = document.getElementById("ditails");
+        const element = document.getElementById("details");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
         element.style.display = "block"

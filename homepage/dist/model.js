@@ -8,7 +8,7 @@ var User = /** @class */ (function () {
     // //   this._address = address;
     // }
     User.prototype.setDetails = function (options) {
-        var name = options.name, address = options.address, tel = options.tel, eMail = options.eMail, city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, flor = options.flor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
+        var name = options.name, address = options.address, tel = options.tel, eMail = options.eMail, city = options.city, area = options.area, animal = options.animal, smoke = options.smoke, floor = options.floor, rooms = options.rooms, partersNo = options.partersNo, price = options.price, imgSrc = options.imgSrc;
         if (name)
             this.name = name;
         if (address)
@@ -25,8 +25,8 @@ var User = /** @class */ (function () {
             this.animal = animal;
         if (smoke)
             this.smoke = smoke;
-        if (flor)
-            this.flor = flor;
+        if (floor)
+            this.floor = floor;
         if (rooms)
             this.rooms = rooms;
         if (partersNo)
@@ -39,19 +39,9 @@ var User = /** @class */ (function () {
     return User;
 }());
 var users = [];
-// const newUser:User = new User("Moshe","123");
-// kjsdfhgkjdhfgkjdhfgj.address = "Nevo"
-// kjsdfhgkjdhfgkjdhfgj.setDetails({city:"Cahir",area:"Egypt"})
-// users.push(new User("Elon Musk", "121314"));
-// users.push(new User("Tim Cook", "233445"));
-// users.push(new User("Bill Gates", "344546"));
-// users.push(new User("Moshe","123"));
-// users.push(kjsdfhgkjdhfgkjdhfgj);
-// console.log(users);
-// class Userif(name) this.name = name;
+var UserProfilList = [];
 var newUser = new User("Elon Musk", "123");
 newUser.setDetails({
-    // name: "Elon Musk",
     address: "Herzel 5",
     tel: "03111111111",
     eMail: "1234@gmail.com",
@@ -59,7 +49,7 @@ newUser.setDetails({
     area: "Center",
     animal: "Yes",
     smoke: "No",
-    flor: "4",
+    floor: "4",
     rooms: "5",
     partersNo: "4",
     price: "2000",
@@ -76,7 +66,7 @@ newUser.setDetails({
     area: "North",
     animal: "No",
     smoke: "Yes",
-    flor: "3",
+    floor: "3",
     rooms: "4",
     partersNo: "3",
     price: "3000",
@@ -93,7 +83,7 @@ newUser.setDetails({
     area: "Merkaz",
     animal: "Yes",
     smoke: "No",
-    flor: "4",
+    floor: "4",
     rooms: "6",
     partersNo: "5",
     price: "1500",
@@ -110,7 +100,7 @@ newUser.setDetails({
     area: "Merkaz",
     animal: "Yes",
     smoke: "No",
-    flor: "4",
+    floor: "4",
     rooms: "6",
     partersNo: "5",
     price: "1500",
@@ -118,7 +108,7 @@ newUser.setDetails({
 });
 users.push(newUser);
 var ApartmentProfil = /** @class */ (function () {
-    function ApartmentProfil(apartmentName, address, city, neighbour, area, animal, smoke, flor, rooms, partersNo, price, apartmentImages) {
+    function ApartmentProfil(apartmentName, address, city, neighbour, area, animal, smoke, floor, rooms, partersNo, price, apartmentImages) {
         if (apartmentImages === void 0) { apartmentImages = []; }
         this.apartmentName = apartmentName;
         this.address = address;
@@ -127,7 +117,7 @@ var ApartmentProfil = /** @class */ (function () {
         this.area = area;
         this.animal = animal;
         this.smoke = smoke;
-        this.flor = flor;
+        this.floor = floor;
         this.rooms = rooms;
         this.partersNo = partersNo;
         this.price = price;
@@ -193,4 +183,4 @@ apartmentProfils.push(new ApartmentProfil("three", "Herzel 30", "Holon", "All", 
         imageName: "kitchen"
     },
 ]));
-console.log(apartmentProfils);
+// console.log(apartmentProfils);

@@ -1,9 +1,24 @@
 var userFromStorg = window.localStorage.getItem('UserProfilList');
+// console.log(userFromStorg);
 if (userFromStorg != null) {
     var userArray = JSON.parse(userFromStorg);
-    // console.log(userArray)
     userArray.forEach(function (userArrays) {
-        users.push(new User(userArrays.name, userArrays.address, userArrays.city, userArrays.area, userArrays.animal, userArrays.smoke, userArrays.flor, userArrays.rooms, userArrays.partersNo, userArrays.price, userArrays.imgSrc));
+        var newUser = new User(userArrays.userName, "123");
+        newUser.setDetails({
+            address: userArrays.address,
+            // tel: "03111111111",
+            // eMail: "1234@gmail.com",
+            city: userArrays.city,
+            area: userArrays.area,
+            animal: userArrays.animal,
+            smoke: userArrays.smoke,
+            floor: userArrays.floor,
+            rooms: userArrays.rooms,
+            partersNo: userArrays.partersNo,
+            price: userArrays.price,
+            imgSrc: userArrays.imgSrc
+        });
+        users.push(newUser);
     });
 }
 console.log(users.length);
@@ -42,7 +57,7 @@ function chekPage() {
         indexEnd = ((indexPage * 8) + 8);
         if (users.length < indexEnd)
             indexEnd = users.length;
-        console.log("indexpage - " + indexPage + " indexEnd - " + indexEnd);
+        // console.log(`indexpage - ${indexPage} indexEnd - ${indexEnd}`)
         if (indexPage * 8 < indexEnd) {
             renderRoommate(((indexPage) * 8), indexEnd);
         }

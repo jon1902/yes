@@ -159,7 +159,7 @@ p {
   padding: 1px;
 }
 
-.ditail {
+.detail {
   width: 1400px;
   position: absolute;
   top: 20%;
@@ -175,7 +175,7 @@ p {
   z-index: 99;
   opacity: 1;
 }
-.ditail__box {
+.detail__box {
   max-width: 1300px;
   max-height: 10px;
   min-height: inherit;
@@ -194,12 +194,12 @@ p {
   opacity: 100%;
   background: var(--white);
 }
-.ditail__box__containerBtn {
+.detail__box__containerBtn {
   position: absolute;
   display: inline-block;
   justify-content: space-between;
 }
-.ditail__box__containerBtn__btn {
+.detail__box__containerBtn__btn {
   border: none;
   color: #fff;
   font-size: 30px;
@@ -210,13 +210,13 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.ditail__box__img {
+.detail__box__img {
   align-items: center;
   width: 150px;
   height: 150px;
 }
 
-#ditails {
+#details {
   opacity: 1;
   opacity: 100%;
 }

@@ -1,17 +1,17 @@
 interface Options{
-   name?:string;
-   address?:string;
-   tel?:string;
-   eMail?: string;
-   city?: string;
-   area?: string;
-   animal?: string;
-   smoke?: string;
-   flor?: string;
-   rooms?: string;
-   partersNo?: string;
-   price?: string;
-   imgSrc?: string;
+  name?:string;
+  address?:string;
+  tel?:string;
+  eMail?: string;
+  city?: string;
+  area?: string;
+  animal?: string;
+  smoke?: string;
+  floor?: string;
+  rooms?: string;
+  partersNo?: string;
+  price?: string;
+  imgSrc?: string;
 }
 
 class User {
@@ -24,7 +24,7 @@ class User {
   public area: string;
   public animal: string;
   public smoke: string;
-  public flor: string;
+  public floor: string;
   public rooms: string;
   public partersNo: string;
   public price: string;
@@ -37,7 +37,7 @@ class User {
   // }
 
   setDetails(options: Options){
-    const {name, address, tel, eMail, city, area, animal, smoke, flor, rooms, partersNo,price, imgSrc} = options;
+    const {name, address, tel, eMail, city, area, animal, smoke, floor, rooms, partersNo,price, imgSrc} = options;
     if(name) this.name = name;
     if(address) this.address = address;
     if(city) this.city = city;
@@ -46,34 +46,20 @@ class User {
     if(area) this.area = area;
     if(animal) this.animal = animal;
     if(smoke) this.smoke = smoke;
-    if(flor) this.flor = flor;
+    if(floor) this.floor = floor;
     if(rooms) this.rooms = rooms;
     if(partersNo) this.partersNo = partersNo;
     if(price) this.price = price;
     if(imgSrc) this.imgSrc = imgSrc;
   }
-
-  
 }
 
 const users: User[] = [];
+let UserProfilList: User[] = [];
 
-// const newUser:User = new User("Moshe","123");
-// kjsdfhgkjdhfgkjdhfgj.address = "Nevo"
-// kjsdfhgkjdhfgkjdhfgj.setDetails({city:"Cahir",area:"Egypt"})
-
-// users.push(new User("Elon Musk", "121314"));
-// users.push(new User("Tim Cook", "233445"));
-// users.push(new User("Bill Gates", "344546"));
-// users.push(new User("Moshe","123"));
-// users.push(kjsdfhgkjdhfgkjdhfgj);
-// console.log(users);
-
-// class Userif(name) this.name = name;
 let newUser:User = new User("Elon Musk", "123");
 
     newUser.setDetails({
-      // name: "Elon Musk",
       address: "Herzel 5",
       tel: "03111111111",
       eMail: "1234@gmail.com",
@@ -81,7 +67,7 @@ let newUser:User = new User("Elon Musk", "123");
       area: "Center",
       animal: "Yes",
       smoke: "No",
-      flor: "4",
+      floor: "4",
       rooms: "5",
       partersNo: "4",
       price: "2000",
@@ -101,7 +87,7 @@ let newUser:User = new User("Elon Musk", "123");
       area: "North",
       animal: "No",
       smoke: "Yes",
-      flor: "3",
+      floor: "3",
       rooms: "4",
       partersNo: "3",
       price: "3000",
@@ -121,7 +107,7 @@ let newUser:User = new User("Elon Musk", "123");
       area: "Merkaz",
       animal: "Yes",
       smoke: "No",
-      flor: "4",
+      floor: "4",
       rooms: "6",
       partersNo: "5",
       price: "1500",
@@ -142,7 +128,7 @@ let newUser:User = new User("Elon Musk", "123");
       area:"Merkaz",
       animal:"Yes",
       smoke:"No",
-      flor:"4",
+      floor:"4",
       rooms:"6",
       partersNo:"5",
       price:"1500",
@@ -171,7 +157,7 @@ class ApartmentProfil {
     public area: string,
     public animal: string,
     public smoke: string,
-    public flor: string,
+    public floor: string,
     public rooms: string,
     public partersNo: string,
     public price: string,
@@ -294,4 +280,4 @@ apartmentProfils.push(
     ]
   )
 );
-console.log(apartmentProfils);
+// console.log(apartmentProfils);

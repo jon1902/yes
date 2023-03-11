@@ -6,28 +6,30 @@ function renderRoommate(indexStart:number, indexEnd:number):void{
         
         let tempUserProfiles:User[] = []
         
-        console.log(`indexStart ${indexStart} indexEnd ${indexEnd}`);
+        // console.log(`indexStart ${indexStart} indexEnd ${indexEnd}`);
         
         for(let i = indexStart; i < indexEnd; i++){
             tempUserProfiles.push(users[i])
-            
           }
-
+        console.log('tempUserProfiles');
+        console.log(tempUserProfiles);
+        
+          
         const html = tempUserProfiles
            .map((users) => {
             return `
             <div class="boxMain__container__boxes roommateDiv roommatePage__container"  onclick="handleShowRoommate('${users.uid}')">
             <img class="boxMain__container__boxes__img"
              src= ${users.imgSrc} alt="roommate Img">
-            <h4>${users.name}</h4>
+            <h4>${users.userName}</h4>
             <p>Area: ${users.area}</p>
             <p>Rooms: up to ${users.rooms}</p>
-            <p>floor: up to ${users.flor}</p>
+            <p>floor: up to ${users.floor}</p>
             </div>
             `;
           })
           .join(" ");
-        // console.log(`html ${html}`);
+        console.log(`html ${html}`);
         const element = document.querySelector(".roommate");
         if (!element) throw new Error("Couldnt find element in the DOM");
         element.innerHTML = html;
@@ -45,12 +47,12 @@ function renderApartment(){
         const html = apartmentProfils
            .map((apartments) => {
             return `
-            <div class="boxMain__container__boxes apartmentDiv ">
+            <div class="boxMain__container__boxes apartmentDiv" onclick="handleShowApartment('${apartments.uid}')>
             <img class="boxMain__container__boxes__img ${apartments.apartmentName}"
              src= ${apartments.apartmentImages[0].urlPicture} alt="roommate Img">
             <h4>${apartments.city}</h4>
             <p>Rooms: ${apartments.rooms}</p>
-            <p>Floor: ${apartments.flor}</p>
+            <p>Floor: ${apartments.floor}</p>
             <p>Price: ${apartments.price} NIS</p>
             </div>
             `;
