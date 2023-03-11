@@ -14,12 +14,12 @@ const apartmentDivsHomepage = document.querySelectorAll(".apartmentDiv")
 
 
 
-apartmentDivsHomepage.forEach((apartmentDivHomepage) =>{
-    apartmentDivHomepage.addEventListener("click", () => {
-        handleShowAapartment(apartmentDivHomepage.innerHTML)
+// apartmentDivsHomepage.forEach((apartmentDivHomepage) =>{
+//     apartmentDivHomepage.addEventListener("click", () => {
+//         handleShowAapartment(apartmentDivHomepage.innerHTML)
 
-    })
-})
+//     })
+// })
 
 
 

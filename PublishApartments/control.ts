@@ -62,11 +62,11 @@
       imgSrcInput.value = "";
 
 
-    }
+    
   });
 
     submitButton.addEventListener("click", function() {
-        // window.location.assign('../homepage/homepage.html');
+        window.location.assign('../homepage/homepage.html');
     });
   }
   

@@ -74,18 +74,20 @@ function hendelBtnBackToPage(){
     }
 }
 
-function handleShowAapartment(uid:string): void{
+function handleShowApartment(uid:string): void{
     try{
         const indexUid = apartmentProfils.findIndex(apartmentUid => apartmentUid.uid === uid);
         if (indexUid === -1) throw new Error("The element dont found")
+        console.log("XXXXXXXX");
+        
             const html = 
                     `<div id="detailBox" class="detail__box ">
                     <div class="detail__box_containerBtn">
                     <button class="profilBtn detail__box__containerBtn__btn" onclick="hendelBtnBackToPage()">X</button>    
-                    <button class="profilBtn galleryBtn detail__box__containerBtn__btn" onclick="hendelShowGallery(${i})">More picture</button>    
+                    <button class="profilBtn galleryBtn detail__box__containerBtn__btn" onclick="hendelShowGallery(${indexUid})">More picture</button>    
                     </div><br>
                     <img class="detail__box__img"
-                    src= ${apartmentProfils[indexUid].apartmentImages[0].urlPicture} alt="roommate Img">
+                    src= ${apartmentProfils[indexUid].apartmentImage} alt="roommate Img">
                     <h4>${apartmentProfils[indexUid].city}</h4>
                     <p>The address  - ${apartmentProfils[indexUid].address}</p>
                     <p>The apartment city - ${apartmentProfils[indexUid].city} city</p>
@@ -113,69 +115,69 @@ function handleShowAapartment(uid:string): void{
     }
 }
 
-function hendelShowGallery(index:number): void{
-    try {
+// function hendelShowGallery(index:number): void{
+//     try {
         
-        const html = 
-        `<div id="detailBox" class="detail__box ">
-        <div class="detail__box_containerBtn">
-            <button class="profilBtn exitBtn detail__box__containerBtn__btn" onclick="handleShowAapartment('${apartmentProfils[index].apartmentName}')">X</button>
-            <button class="profilBtn backBtn detail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
-            <button class="profilBtn NextBtn detail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
-        </div><br>
-            <img class="detail__box__img apartmentImage"
-            src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
-        </div>`;
+//         const html = 
+//         `<div id="detailBox" class="detail__box ">
+//         <div class="detail__box_containerBtn">
+//             <button class="profilBtn exitBtn detail__box__containerBtn__btn" onclick="handleShowAapartment('${apartmentProfils[index].apartmentName}')">X</button>
+//             <button class="profilBtn backBtn detail__box__containerBtn__btn" onclick="hendelBtnBackImage(${index})"><</botton>
+//             <button class="profilBtn NextBtn detail__box__containerBtn__btn" onclick="hendelBtnNextImage(${index})">></button>    
+//         </div><br>
+//             <img class="detail__box__img apartmentImage"
+//             src= ${apartmentProfils[index].apartmentImages[0].urlPicture} alt="roommate Img">
+//         </div>`;
 
-        const element = document.getElementById("details");
-        if (!element) throw new Error("Couldnt find element in the DOM");
-        element.innerHTML = html;
-        element.style.display = "block"
-        if(document.getElementById("containerBox"))
-            document.getElementById("containerBox")!.style.opacity = "0.6"
-        if(document.getElementById("containerApartment"))
-            document.getElementById("containerApartment")!.style.opacity = "0.6"
-        indexArray = 0
+//         const element = document.getElementById("details");
+//         if (!element) throw new Error("Couldnt find element in the DOM");
+//         element.innerHTML = html;
+//         element.style.display = "block"
+//         if(document.getElementById("containerBox"))
+//             document.getElementById("containerBox")!.style.opacity = "0.6"
+//         if(document.getElementById("containerApartment"))
+//             document.getElementById("containerApartment")!.style.opacity = "0.6"
+//         indexArray = 0
         
-    } catch (error) {
-        console.error(error)
-    }
+//     } catch (error) {
+//         console.error(error)
+//     }
    
-}
+// }
 
-function hendelBtnBackImage(index:number): void{
-    try {
-        const element = document.querySelector(".apartmentImage") 
+// function hendelBtnBackImage(index:number): void{
+//     try {
+//         const element = document.querySelector(".apartmentImage") 
         
-        if (!element) throw new Error("Couldnt find element in the DOM");        
-            if(indexArray === 0) {
-                indexArray = apartmentProfils[index].apartmentImages.length - 1
-            }else{
-                indexArray--
-           }
-        element.src = apartmentProfils[index].apartmentImages[indexArray].urlPicture     
+//         if (!element) throw new Error("Couldnt find element in the DOM");        
+//             if(indexArray === 0) {
+//                 indexArray = apartmentProfils[index].apartmentImage.length - 1
+//             }else{
+//                 indexArray--
+//            }
+//         element.src = apartmentProfils[index].apartmentImage     
 
-    } catch (error) {
-        console.error(error)
-    }
-}
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-function hendelBtnNextImage(index:number): void{
-    try {
-        const element = document.querySelector(".apartmentImage") 
+// function hendelBtnNextImage(index:number): void{
+//     try {
+//         const element = document.querySelector(".apartmentImage") 
         
-        if (!element) throw new Error("Couldnt find element in the DOM");        
+//         if (!element) throw new Error("Couldnt find element in the DOM");        
  
-        indexArray++
+//         indexArray++
             
-        if(indexArray === apartmentProfils[index].apartmentImages.length) 
-            indexArray = 0
+//         if(indexArray === apartmentProfils[index].apartmentImages.length) 
+//             indexArray = 0
 
-         element.src = apartmentProfils[index].apartmentImages[indexArray].urlPicture     
+//          element.src = apartmentProfils[index].apartmentImages[indexArray].urlPicture     
        
-    } catch (error) {
-        console.error(error)
-    }
+//     } catch (error) {
+//         console.error(error)
+//     }
 
-}
+// }
 

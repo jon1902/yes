@@ -33,11 +33,10 @@ if (submitButton) {
         priceInput.value = "";
         imgSrcInput.value = "";
     });
+    submitButton.addEventListener("click", function () {
+        window.location.assign('../homepage/homepage.html');
+    });
 }
-;
-submitButton.addEventListener("click", function () {
-    // window.location.assign('../homepage/homepage.html');
-});
 // retrieve data from local storage
 var storedData = localStorage.getItem("ApartmentList");
 // console.log("storedData")
