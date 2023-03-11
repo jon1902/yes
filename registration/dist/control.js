@@ -13,11 +13,14 @@ if (regSubmitButton) {
             tel: _tel.value,
             eMail: _email.value
         });
-        var registraionNewUsers = [];
-        if (registraionNewUsers) {
-            registraionNewUsers.push(_newUser);
-            localStorage.setItem("registraionNewUsers", JSON.stringify(users));
-            console.log(registraionNewUsers);
+        var userFromStorg = window.localStorage.getItem('registraionNewUsers');
+        if (userFromStorg != null) {
+            var registraionNewUsers = JSON.parse(userFromStorg);
+            if (registraionNewUsers) {
+                registraionNewUsers.push(_newUser);
+                localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
+                console.log(registraionNewUsers);
+            }
         }
     });
     //   regSubmitButton.addEventListener("click", function () {

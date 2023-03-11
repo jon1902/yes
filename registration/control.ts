@@ -17,12 +17,17 @@ if (regSubmitButton) {
       tel: _tel.value,
       eMail: _email.value,
     });
-    const registraionNewUsers:any[] = []
+    let userFromStorg =  window.localStorage.getItem('registraionNewUsers')
+
+
+if(userFromStorg != null){
+
+    const registraionNewUsers = JSON.parse(userFromStorg)
 
     if(registraionNewUsers){
     registraionNewUsers.push(_newUser);
     
-    localStorage.setItem("registraionNewUsers", JSON.stringify(users));
+    localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
     console.log(registraionNewUsers)
     }
   });
