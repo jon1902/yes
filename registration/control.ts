@@ -20,7 +20,7 @@ if (regSubmitButton) {
 
     users.push(_newUser);
 
-    localStorage.setItem("regNewUsers", JSON.stringify(users));
+    localStorage.setItem("registraionNewUsers", JSON.stringify(users));
   });
 
   regSubmitButton.addEventListener("click", function () {
