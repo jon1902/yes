@@ -26,6 +26,8 @@ const myButton = document.getElementById("myButton");
 // }
 
 
+
+
 if(myButton && loginInput && passwordInput)
 // Add an event listener to the login button
 myButton.addEventListener("click", function() {
@@ -54,34 +56,43 @@ myButton.addEventListener("click", function() {
     //  console.log("Login failed. Invalid login or password. or No login data found");
    }
  } else {
+  const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+
+  const errorMessage = "Login failed. Invalid login or password.";
+  errorMessageElement.innerText = errorMessage;
    console.log("Login failed. No login data found.");
  }
 });
 
-// // // If login data exists in local storage, parse it from the JSON string
-// // if (loginDataString) {
-// //   loginData = JSON.parse(loginDataString);
-// // }
 
-// // // Push the new login data item into the array
-// // loginData.push({ login, password });
 
-// // // Convert the updated login data array to a JSON string
-// // const updatedLoginDataString = JSON.stringify(loginData);
 
-// // // Save the updated JSON string back to local storage
-// // localStorage.setItem("loginData", updatedLoginDataString);
 
-// // // Check if the login and password data exists in the array
-// // const loginDataExists = loginData.some(
-// //     (data) => data.login === login && data.password === password
-// //   );
+
+//  If login data exists in local storage, parse it from the JSON string
+// if (loginDataString) {
+//   loginData = JSON.parse(loginDataString);
+// }
+
+//  Push the new login data item into the array
+// loginData.push({ login, password });
+
+// Convert the updated login data array to a JSON string
+// const updatedLoginDataString = JSON.stringify(loginData);
+
+//  Save the updated JSON string back to local storage
+// localStorage.setItem("loginData", updatedLoginDataString);
+
+//  Check if the login and password data exists in the array
+// const loginDataExists = loginData.some(
+//     (data) => data.login === login && data.password === password
+//   );
   
-// //   if (loginDataExists) {
-// //     console.log("Login and password data exists in local storage.");
-// //   } else {
-// //     console.log("Login and password data does not exist in local storage.");
-// //   }
+//   if (loginDataExists) {
+//     console.log("Login and password data exists in local storage.");
+//   } else {
+//     console.log("Login and password data does not exist in local storage.");
+//   }
   
 
 //   // Save the login and password values to local storage
