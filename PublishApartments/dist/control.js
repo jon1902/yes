@@ -12,7 +12,13 @@ var submitButton = document.querySelector("#myButton");
 if (submitButton) {
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
-        newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value));
+        newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value, [
+            {
+                id: uid(),
+                urlPicture: imgSrcInput.value,
+                imageName: "out Apartment"
+            },
+        ]));
         apartmentList.push(newApartment);
         localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
         // nameInput.value = "";
