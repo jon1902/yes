@@ -16,8 +16,16 @@
     
     submitButton.addEventListener("click", (e: Event) => {
       e.preventDefault();
-     
-    newApartment.push(
+    
+      let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
+        
+      if(apartmentFromStorg != null){
+          apartmentList = JSON.parse(apartmentFromStorg)
+      }
+        
+
+
+      apartmentList.push(
       new ApartmentProfil(
         adressInput.value,
         cityInput.value,
@@ -33,20 +41,9 @@
       )
     );
 
-    
-    
-    
-    let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
-        
-    if(apartmentFromStorg != null){
-        apartmentList = JSON.parse(apartmentFromStorg)
-    }
-    
-    
-    apartmentList.push(newApartment);
 
     console.log("apartmentList");
-    console.log(apartmentList);
+    console.log(apartmentList.length);
 
       localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
       // nameInput.value = "";

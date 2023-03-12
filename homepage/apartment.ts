@@ -12,12 +12,9 @@
 let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
     
 if(apartmentFromStorg != null){
-    apartmentFromStorg = apartmentFromStorg!.replaceAll("[","");
-    apartmentFromStorg = apartmentFromStorg!.replaceAll("]","");
-    apartmentFromStorg = "[" + apartmentFromStorg + "]"
-    
-
     const apartmentArray = JSON.parse(apartmentFromStorg)
+    console.log("apartmentArray.length");
+    console.log(apartmentArray.length);
         
         apartmentArray.forEach(apartmentArrays => {
             apartmentProfils.push(
@@ -79,8 +76,8 @@ function chekPageApartment(){
         if(!apartmentProfils) throw new Error("The array is empty")
         endAPage = false
         indexAEnd = ((indexAPage * 8) + 8)
-        console.log("apartmentProfils");
-        console.log(apartmentProfils);
+        // console.log("apartmentProfils");
+        // console.log(apartmentProfils);
         
         if(apartmentProfils.length < indexAEnd)    indexAEnd = apartmentProfils.length
         // console.log(`indexpage - ${indexPage} indexEnd - ${indexEnd}`)

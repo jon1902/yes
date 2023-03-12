@@ -12,14 +12,13 @@ var submitButton = document.querySelector("#myButton");
 if (submitButton) {
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
-        newApartment.push(new ApartmentProfil(adressInput.value, cityInput.value, "", areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value));
         var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
         if (apartmentFromStorg != null) {
             apartmentList = JSON.parse(apartmentFromStorg);
         }
-        apartmentList.push(newApartment);
+        apartmentList.push(new ApartmentProfil(adressInput.value, cityInput.value, "", areaInput.value, animalInput.value, smokeInput.value, floorInput.value, roomsInput.value, partersNoInput.value, priceInput.value, imgSrcInput.value));
         console.log("apartmentList");
-        console.log(apartmentList);
+        console.log(apartmentList.length);
         localStorage.setItem("ApartmentList", JSON.stringify(apartmentList));
         // nameInput.value = "";
         adressInput.value = "";

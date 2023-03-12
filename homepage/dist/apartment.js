@@ -7,10 +7,9 @@
 // })
 var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
 if (apartmentFromStorg != null) {
-    apartmentFromStorg = apartmentFromStorg.replaceAll("[", "");
-    apartmentFromStorg = apartmentFromStorg.replaceAll("]", "");
-    apartmentFromStorg = "[" + apartmentFromStorg + "]";
     var apartmentArray = JSON.parse(apartmentFromStorg);
+    console.log("apartmentArray.length");
+    console.log(apartmentArray.length);
     apartmentArray.forEach(function (apartmentArrays) {
         apartmentProfils.push(new ApartmentProfil(apartmentArrays.address, apartmentArrays.city, apartmentArrays.neighbour, apartmentArrays.area, apartmentArrays.animal, apartmentArrays.smoke, apartmentArrays.floor, apartmentArrays.rooms, apartmentArrays.partersNo, apartmentArrays.price, apartmentArrays.apartmentImage));
         apartmentProfils.push(apartmentArrays);
@@ -49,8 +48,8 @@ function chekPageApartment() {
             throw new Error("The array is empty");
         endAPage = false;
         indexAEnd = ((indexAPage * 8) + 8);
-        console.log("apartmentProfils");
-        console.log(apartmentProfils);
+        // console.log("apartmentProfils");
+        // console.log(apartmentProfils);
         if (apartmentProfils.length < indexAEnd)
             indexAEnd = apartmentProfils.length;
         // console.log(`indexpage - ${indexPage} indexEnd - ${indexEnd}`)
