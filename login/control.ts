@@ -1,12 +1,15 @@
 
-// Get the login and password input fields and the login button
-const loginInput = document.getElementById("mail") as HTMLInputElement;
-const passwordInput = document.getElementById("password") as HTMLInputElement;
-const myButton = document.getElementById("myButton");
 
 
-// const loginToCheck = loginInput.value;
-// const passwordToCheck = passwordInput.value;
+
+// // Get the login and password input fields and the login button
+// const _username = document.querySelector("#username") as HTMLInputElement;
+// const _password = document.querySelector("#password") as HTMLInputElement;
+// const myButton = document.getElementById("#myButton");
+
+
+// const loginToCheck = _username.value;
+// const passwordToCheck = _password.value;
 
 // // Get the stored login and password data from local storage
 // const storedData = localStorage.getItem("loginData");
@@ -28,42 +31,65 @@ const myButton = document.getElementById("myButton");
 
 
 
-if(myButton && loginInput && passwordInput)
-// Add an event listener to the login button
-myButton.addEventListener("click", function() {
- // Get the login and password values entered by the user
- const loginToCheck = loginInput.value;
- const passwordToCheck = passwordInput.value;
+// if(myButton && _username && _password)
+// // Add an event listener to the login button
+// myButton.addEventListener("click", function() {
 
 
- // Get the stored login and password data from local storage
- const storedData = localStorage.getItem("loginData");
-
- // Check if the stored data exists and if the login and password match
- if (storedData) {
-   const loginData = JSON.parse(storedData);
-
-   if (loginData.some(data => data.login === loginToCheck && data.password === passwordToCheck)) {
-      window.location.href ="/homepage/homepage.html";
      
-     // TODO: Add logic to redirect the user to the main app page
-   } else {
+// //  const _newUser: User = new User(loginToCheck, passwordToCheck);
 
-  const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
 
-  const errorMessage = "Login failed. Invalid login or password.";
-  errorMessageElement.innerText = errorMessage;
-  console.log("Login failed. Invalid login or password. or No login data found")
-    //  console.log("Login failed. Invalid login or password. or No login data found");
-   }
- } else {
-  const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
 
-  const errorMessage = "Login failed. Invalid login or password.";
-  errorMessageElement.innerText = errorMessage;
-   console.log("Login failed. No login data found.");
- }
-});
+// const storedRegistration = localStorage.getItem("registraionNewUsers");
+
+// const registration = storedRegistration ? JSON.parse(storedRegistration) : null;
+//  // Get the stored login and password data from local storage
+
+//  // Get the login and password values entered by the user
+//  const loginToCheck = _username.value;
+//  const passwordToCheck = _password.value;
+
+
+//  if (_username === registration.username && _password === registration.password) {
+//    window.location.href ="/homepage/homepage.html";
+// }  else {
+
+//     const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+  
+//     const errorMessage = "Login failed. Invalid login or password.";
+//     errorMessageElement.innerText = errorMessage;
+//     console.log("Login failed. Invalid login or password. or No login data found")
+//       //  console.log("Login failed. Invalid login or password. or No login data found");
+//      }
+
+
+
+//  // Check if the stored data exists and if the login and password match
+//  if (storedData) {
+//    const loginData = JSON.parse(storedData);
+
+//    if (loginData.some(data => data.login === loginToCheck && data.password === passwordToCheck)) {
+//       window.location.href ="/homepage/homepage.html";
+     
+//      // TODO: Add logic to redirect the user to the main app page
+//    } else {
+
+//   const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+
+//   const errorMessage = "Login failed. Invalid login or password.";
+//   errorMessageElement.innerText = errorMessage;
+//   console.log("Login failed. Invalid login or password. or No login data found")
+//     //  console.log("Login failed. Invalid login or password. or No login data found");
+//    }
+//  } else {
+//   const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+
+//   const errorMessage = "Login failed. Invalid login or password.";
+//   errorMessageElement.innerText = errorMessage;
+//    console.log("Login failed. No login data found.");
+//  }
+// });
 
 
 
@@ -110,3 +136,37 @@ myButton.addEventListener("click", function() {
 //       return;
 //     }
 // }
+
+const loginButton = document.getElementById("myButton") as HTMLButtonElement;
+loginButton.addEventListener("click", handleLogin);
+// Add an event listener to the login button
+
+function handleLogin() {
+  // Get stored credentials from local storage
+  const storedCredentials = localStorage.getItem("registraionNewUsers");
+  
+  // If credentials are not stored, return false
+  if (!storedCredentials) {
+    return false;
+  }
+  
+  // Parse stored credentials into an object
+  const credentials = JSON.parse(storedCredentials);
+  
+  // Get input values from login form
+  const username = (document.getElementById("username") as HTMLInputElement).value;
+  const password = (document.getElementById("password") as HTMLInputElement).value;
+  
+  // Check if input values match stored credentials
+  if (username === credentials.userName && password === credentials.passWord) {
+    window.location.href ="/homepage/homepage.html";
+  }  else {
+
+        const errorMessageElement = document.getElementById('error-message') as HTMLDivElement;
+      
+        const errorMessage = "Login failed. Invalid login or password.";
+        errorMessageElement.innerText = errorMessage;
+        console.log("Login failed. Invalid login or password. or No login data found")
+          //  console.log("Login failed. Invalid login or password. or No login data found");
+         }
+}
