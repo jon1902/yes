@@ -31,13 +31,10 @@ function renderApartment(indexStart, indexEnd) {
         var tempApartmentProfiles = [];
         for (var i = indexStart; i < indexEnd; i++) {
             tempApartmentProfiles.push(apartmentProfils[i]);
-            console.log('tempapartmentProfiles');
-            console.log(tempApartmentProfiles);
-            console.log(apartmentProfils[i]);
         }
         var html = tempApartmentProfiles
             .map(function (apartments) {
-            return "\n            <div class=\"boxMain__container__boxes apartmentDiv apartment__\" onclick=\"handleShowApartment('" + apartments.uid + "')\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + apartments.apartmentImage + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>Rooms: " + apartments.rooms + "</p>\n            <p>Floor: " + apartments.floor + "</p>\n            <p>Price: " + apartments.price + " NIS</p>\n            </div>\n            ";
+            return "\n            <div class=\"boxMain__container__boxes apartmentDiv apartment__container\" onclick=\"handleShowApartment('" + apartments.uid + "')\">\n            <img class=\"boxMain__container__boxes__img\"\n             src= " + apartments.apartmentImage + " alt=\"roommate Img\">\n            <h4>" + apartments.city + "</h4>\n            <p>Rooms: " + apartments.rooms + "</p>\n            <p>Floor: " + apartments.floor + "</p>\n            <p>Price: " + apartments.price + " NIS</p>\n            </div>\n            ";
         })
             .join(" ");
         // console.log(`htmlApartments ${html}`);

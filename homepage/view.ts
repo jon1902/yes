@@ -48,15 +48,12 @@ function renderApartment(indexStart:number, indexEnd:number):void{
 
           for(let i = indexStart; i < indexEnd; i++){
             tempApartmentProfiles.push(apartmentProfils[i])
-            console.log('tempapartmentProfiles');
-            console.log(tempApartmentProfiles);
-            console.log(apartmentProfils[i]);
           }
       
         const html = tempApartmentProfiles
            .map((apartments) => {
             return `
-            <div class="boxMain__container__boxes apartmentDiv apartment__" onclick="handleShowApartment('${apartments.uid}')">
+            <div class="boxMain__container__boxes apartmentDiv apartment__container" onclick="handleShowApartment('${apartments.uid}')">
             <img class="boxMain__container__boxes__img"
              src= ${apartments.apartmentImage} alt="roommate Img">
             <h4>${apartments.city}</h4>
