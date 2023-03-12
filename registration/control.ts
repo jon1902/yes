@@ -22,16 +22,16 @@ if (regSubmitButton) {
 
 
 if(userFromStorg != null){
-
-    const registraionNewUsers = JSON.parse(userFromStorg)
-
-    if(registraionNewUsers){
-    registraionNewUsers.push(_newUser);
+  registraionNewUsers.push(JSON.parse(userFromStorg))
+}
+     
+    // if(registraionNewUsers){
+      registraionNewUsers.push(_newUser);
     
     localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
     console.log(registraionNewUsers)
-    }
-  }});
+    // }
+  });
 
   regSubmitButton.addEventListener("click", function () {
     window.location.assign("../homepage/homepage.html");

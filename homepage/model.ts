@@ -59,6 +59,7 @@ class User {
 }
 
 const users: User[] = [];
+const registraionNewUsers: User[] = [];
 let UserProfilList: User[] = [];
 
 let newUser:User = new User("Elon Musk", "123");

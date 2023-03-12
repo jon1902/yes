@@ -15,13 +15,13 @@ if (regSubmitButton) {
         });
         var userFromStorg = window.localStorage.getItem('registraionNewUsers');
         if (userFromStorg != null) {
-            var registraionNewUsers = JSON.parse(userFromStorg);
-            if (registraionNewUsers) {
-                registraionNewUsers.push(_newUser);
-                localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
-                console.log(registraionNewUsers);
-            }
+            registraionNewUsers.push(JSON.parse(userFromStorg));
         }
+        // if(registraionNewUsers){
+        registraionNewUsers.push(_newUser);
+        localStorage.setItem("registraionNewUsers", JSON.stringify(registraionNewUsers));
+        console.log(registraionNewUsers);
+        // }
     });
     regSubmitButton.addEventListener("click", function () {
         window.location.assign("../homepage/homepage.html");

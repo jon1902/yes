@@ -6,9 +6,6 @@
 //     })
 // })
 var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
-console.log("LLLLLLLLLLLLLLLLLL");
-console.log(apartmentFromStorg);
-console.log("LLLLLLLLLLLLLLLLLL");
 if (apartmentFromStorg != null) {
     var apartmentArray = JSON.parse(apartmentFromStorg);
     console.log("apartmentArray.length");

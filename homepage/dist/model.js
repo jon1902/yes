@@ -39,6 +39,7 @@ var User = /** @class */ (function () {
     return User;
 }());
 var users = [];
+var registraionNewUsers = [];
 var UserProfilList = [];
 var newUser = new User("Elon Musk", "123");
 newUser.setDetails({
