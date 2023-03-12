@@ -104,14 +104,14 @@ body {
   border-radius: 50%;
 }
 
-.roommatePage .apartmentsPage {
-  margin-left: 170px;
+.roommatePage, .apartmentsPage {
+  margin-left: 570px;
   display: grid;
   grid-template-rows: 90%;
-  grid-template-columns: repeat(4, 90px);
-  grid-template-rows: repeat(4, 240px);
-  row-gap: 70px;
-  column-gap: 80px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 300px);
+  row-gap: 100px;
+  column-gap: 120px;
 }
 
 p {
@@ -145,14 +145,14 @@ p {
   transition: all 0.3s ease;
 }
 
-.roommatePgaeBtn {
-  margin-top: 360px;
+.roommatePgaeBtn, .apartmentPgaeBtn {
+  margin-top: 560px;
 }
-.roommatePgaeBtn__next {
-  margin-right: 500px;
+.roommatePgaeBtn__next, .roommatePgaeBtn__next, .apartmentPgaeBtn__next, .apartmentPgaeBtn__next {
+  margin-right: 800px;
 }
-.roommatePgaeBtn__back {
-  margin-left: 500px;
+.roommatePgaeBtn__back, .roommatePgaeBtn__back, .apartmentPgaeBtn__back, .apartmentPgaeBtn__back {
+  margin-left: 800px;
 }
 
 .profilBtn {

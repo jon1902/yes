@@ -10,10 +10,7 @@
 // })
 
 let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
-    console.log("LLLLLLLLLLLLLLLLLL");
-    console.log(apartmentFromStorg);
-    console.log("LLLLLLLLLLLLLLLLLL");
-
+    
 if(apartmentFromStorg != null){
     apartmentFromStorg = apartmentFromStorg!.replaceAll("[","");
     apartmentFromStorg = apartmentFromStorg!.replaceAll("]","");
@@ -39,8 +36,9 @@ if(apartmentFromStorg != null){
 
                 ))
             apartmentProfils.push(apartmentArrays)
-                
+                    
         })
+   
     }
 
 
@@ -54,7 +52,7 @@ if(apartmentProfils.length < 9)
 
 renderApartment(0, indexAEnd)
 
-function hendleApartmentBackPage(){
+function hendleapArtmentBackPage(){
     try{
         indexAPage--
         if(indexAPage < 0) indexAPage = 0
@@ -66,6 +64,7 @@ function hendleApartmentBackPage(){
 
 function hendleApartmentNextPage(){
     try {
+        
         if(!endAPage) indexAPage++
         chekPageApartment()
             
@@ -80,7 +79,9 @@ function chekPageApartment(){
         if(!apartmentProfils) throw new Error("The array is empty")
         endAPage = false
         indexAEnd = ((indexAPage * 8) + 8)
-
+        console.log("apartmentProfils");
+        console.log(apartmentProfils);
+        
         if(apartmentProfils.length < indexAEnd)    indexAEnd = apartmentProfils.length
         // console.log(`indexpage - ${indexPage} indexEnd - ${indexEnd}`)
         
