@@ -9,7 +9,7 @@
 //     })
 // })
 
-let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
+let apartmentFromStorg:any =  window.localStorage.getItem('ApartmentList')
     console.log("LLLLLLLLLLLLLLLLLL");
     console.log(apartmentFromStorg);
     console.log("LLLLLLLLLLLLLLLLLL");
