@@ -6,13 +6,16 @@
 //     })
 // })
 var apartmentFromStorg = window.localStorage.getItem('ApartmentList');
+console.log("LLLLLLLLLLLLLLLLLL");
+console.log(apartmentFromStorg);
+console.log("LLLLLLLLLLLLLLLLLL");
 if (apartmentFromStorg != null) {
     var apartmentArray = JSON.parse(apartmentFromStorg);
     console.log("apartmentArray.length");
     console.log(apartmentArray.length);
     apartmentArray.forEach(function (apartmentArrays) {
         apartmentProfils.push(new ApartmentProfil(apartmentArrays.address, apartmentArrays.city, apartmentArrays.neighbour, apartmentArrays.area, apartmentArrays.animal, apartmentArrays.smoke, apartmentArrays.floor, apartmentArrays.rooms, apartmentArrays.partersNo, apartmentArrays.price, apartmentArrays.apartmentImage));
-        apartmentProfils.push(apartmentArrays);
+        // apartmentProfils.push(apartmentArrays)
     });
 }
 var indexAEnd = 8;

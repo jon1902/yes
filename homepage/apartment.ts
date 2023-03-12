@@ -9,8 +9,11 @@
 //     })
 // })
 
-let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
-    
+let apartmentFromStorg:any =  window.localStorage.getItem('ApartmentList')
+    console.log("LLLLLLLLLLLLLLLLLL");
+    console.log(apartmentFromStorg);
+    console.log("LLLLLLLLLLLLLLLLLL");
+
 if(apartmentFromStorg != null){
     const apartmentArray = JSON.parse(apartmentFromStorg)
     console.log("apartmentArray.length");
@@ -32,7 +35,7 @@ if(apartmentFromStorg != null){
                   apartmentArrays.apartmentImage,
 
                 ))
-            apartmentProfils.push(apartmentArrays)
+            // apartmentProfils.push(apartmentArrays)
                     
         })
    

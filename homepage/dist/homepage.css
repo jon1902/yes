@@ -77,19 +77,20 @@ body {
   top: 40px;
 }
 .boxMain__container {
+  display: flex;
+  margin: auto;
   max-width: 1200px;
   justify-content: space-between;
   max-height: 300px;
   min-height: inherit;
   padding: 32px;
   color: var(--blue);
-  display: flex;
-  margin: auto;
   left: 50%;
   cursor: pointer;
 }
 .boxMain__container__boxes {
-  width: 300%;
+  width: 352px;
+  height: 236px;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   text-align: center;
@@ -104,14 +105,24 @@ body {
   border-radius: 50%;
 }
 
-.roommatePage, .apartmentsPage {
-  margin-left: 570px;
+.apartmentsPage {
+  margin-left: 80px;
   display: grid;
   grid-template-rows: 90%;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 300px);
+  grid-template-rows: repeat(2, 300px);
   row-gap: 100px;
-  column-gap: 120px;
+  column-gap: 300px;
+}
+
+.roommatePage {
+  margin-left: 80px;
+  display: grid;
+  grid-template-rows: 90%;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(2, 300px);
+  row-gap: 100px;
+  column-gap: 300px;
 }
 
 p {
@@ -132,7 +143,7 @@ p {
 }
 .btnDiv__btn {
   height: 50px;
-  width: 300px;
+  width: 500px;
   margin: auto;
   border: none;
   color: #fff;
@@ -149,15 +160,15 @@ p {
   margin-top: 560px;
 }
 .roommatePgaeBtn__next, .roommatePgaeBtn__next, .apartmentPgaeBtn__next, .apartmentPgaeBtn__next {
-  margin-right: 800px;
+  margin-right: 300px;
 }
 .roommatePgaeBtn__back, .roommatePgaeBtn__back, .apartmentPgaeBtn__back, .apartmentPgaeBtn__back {
-  margin-left: 800px;
+  margin-left: 300px;
 }
 
 .profilBtn {
   border: 2px var(--blue) solid;
-  padding: 1px;
+  padding: 5px;
 }
 
 .detail {
