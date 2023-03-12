@@ -10,11 +10,17 @@
 // })
 
 let apartmentFromStorg =  window.localStorage.getItem('ApartmentList')
+    console.log("LLLLLLLLLLLLLLLLLL");
+    console.log(apartmentFromStorg);
+    console.log("LLLLLLLLLLLLLLLLLL");
 
 if(apartmentFromStorg != null){
+    apartmentFromStorg = apartmentFromStorg!.replaceAll("[","");
+    apartmentFromStorg = apartmentFromStorg!.replaceAll("]","");
+    apartmentFromStorg = "[" + apartmentFromStorg + "]"
+    
 
     const apartmentArray = JSON.parse(apartmentFromStorg)
-        
         
         apartmentArray.forEach(apartmentArrays => {
             apartmentProfils.push(
@@ -33,17 +39,11 @@ if(apartmentFromStorg != null){
 
                 ))
             apartmentProfils.push(apartmentArrays)
-
-            console.log("QQQQQQQQQQQ");
-            console.log(apartmentProfils);
                 
         })
     }
 
-console.log('apartmentProfilsXXXXXXX');
-console.log(apartmentProfils);
-// console.log(apartmentProfils);
-// console.log(apartmentFromStorg);
+
     
 let indexAEnd = 8
 let indexAPage = 0
@@ -56,8 +56,8 @@ renderApartment(0, indexAEnd)
 
 function hendleApartmentBackPage(){
     try{
-        indexPage--
-        if(indexPage < 0) indexPage = 0
+        indexAPage--
+        if(indexAPage < 0) indexAPage = 0
         chekPageApartment()
     } catch (error) {
     console.error(error)        
@@ -66,7 +66,7 @@ function hendleApartmentBackPage(){
 
 function hendleApartmentNextPage(){
     try {
-        if(!endPage) indexAPage++
+        if(!endAPage) indexAPage++
         chekPageApartment()
             
     } catch (error) {

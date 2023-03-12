@@ -56,7 +56,7 @@ function renderApartment(indexStart:number, indexEnd:number):void{
         const html = tempApartmentProfiles
            .map((apartments) => {
             return `
-            <div class="boxMain__container__boxes apartmentDiv" onclick="handleShowApartment('${apartments.uid}')">
+            <div class="boxMain__container__boxes apartmentDiv apartment__" onclick="handleShowApartment('${apartments.uid}')">
             <img class="boxMain__container__boxes__img"
              src= ${apartments.apartmentImage} alt="roommate Img">
             <h4>${apartments.city}</h4>

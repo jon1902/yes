@@ -104,7 +104,7 @@ body {
   border-radius: 50%;
 }
 
-.roommatePage {
+.roommatePage .apartmentsPage {
   margin-left: 170px;
   display: grid;
   grid-template-rows: 90%;

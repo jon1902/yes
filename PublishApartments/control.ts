@@ -80,3 +80,4 @@
   if (storedData) {
     UserProfilList = JSON.parse(storedData);
   }
+}

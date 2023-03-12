@@ -3,7 +3,6 @@ let userFromStorg =  window.localStorage.getItem('UserProfilList')
 // console.log(userFromStorg);
 
 if(userFromStorg != null){
-
     const userArray = JSON.parse(userFromStorg)
     
         userArray.forEach(userArrays => {
