@@ -38,7 +38,7 @@ if(apartmentFromStorg != null){
                   apartmentArrays.apartmentImage,
 
                 ))
-            apartmentProfils.push(apartmentArrays)
+            // apartmentProfils.push(apartmentArrays)
                     
         })
    
